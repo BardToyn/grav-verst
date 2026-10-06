@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --font-family: "Manrope", sans-serif;
+
+    /*heading-start*/
+
+    --heading-h1-size: calc(67 / 1440 * 100vw);/*webkit and firefox*/
+    --heading-h1-line-height: 120%;
+    --heading-h1-font-weight: 500;
+
+    --heading-h2-size: calc(62 / 1440 * 100vw);/*webkit and firefox*/
+    --heading-h2-line-height: 120%;
+    --heading-h2-font-weight: 300;
+
+    --heading-h3-size: calc(40 / 1440 * 100vw);/*webkit and firefox*/
+    --heading-h3-line-height: 120%;
+    --heading-h3-font-weight: 300;
+
+    --heading-h4-size: calc(28 / 1440 * 100vw);/*webkit and firefox*/
+    --heading-h4-line-height: 120%;
+    --heading-h4-font-weight: 300;
+
+    --heading-h5-size: calc(21 / 1440 * 100vw);/*webkit and firefox*/
+    --heading-h5-line-height: 120%;
+    --heading-h5-font-weight: 400;
+
+    --heading-h6-size: calc(16 / 1440 * 100vw);/*webkit and firefox*/
+    --heading-h6-line-height: 120%;
+    --heading-h6-font-weight: 400;
+
+    /*heading-end*/
+
+    /*other-typography-start*/
+
+    --subtitle-size: calc(18 / 1440 * 100vw);/*webkit and firefox*/
+    --subtitle-line-height: 140%;
+    --subtitle-font-weight: 400;
+
+    --body-size: calc(16 / 1440 * 100vw);/*webkit and firefox*/
+    --body-line-height: 140%;
+    --body-font-weight: 400;
+
+    --button-size: calc(16 / 1440 * 100vw);/*webkit and firefox*/
+    --button-line-height: 120%;
+    --button-font-weight: 400;
+
+    --link-size: calc(16 / 1440 * 100vw);/*webkit and firefox*/
+    --link-line-height: 120%;
+    --link-font-weight: 500;
+
+    --overline-size: calc(14 / 1440 * 100vw);/*webkit and firefox*/
+    --overline-line-height: 120%;
+    --overline-font-weight: 500;
+
+    --caption-size: calc(14 / 1440 * 100vw);/*webkit and firefox*/
+    --caption-line-height: 120%;
+    --caption-font-weight: 400;
+
+    --caption-small-size: calc(14 / 1440 * 100vw);/*webkit and firefox*/
+    --caption-small-line-height: 120%;
+    --caption-small-font-weight: 500;
+
+    /*other-typography-end*/
+
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+/*heading-start*/
+
+.heading-h1 {
+    font-family: var(--font-family);
+    font-size: var(--heading-h1-size);
+    line-height: var(--heading-h1-line-height);
+    font-weight: var(--heading-h1-font-weight);
+}
+
+.heading-h2 {
+    font-family: var(--font-family);
+
+    font-size: var(--heading-h2-size);
+    line-height: var(--heading-h2-line-height);
+    font-weight: var(--heading-h2-font-weight);
+    text-transform: uppercase;
+}
+
+.heading-h3 {
+    font-family: var(--font-family);
+    font-size: var(--heading-h3-size);
+    line-height: var(--heading-h3-line-height);
+    font-weight: var(--heading-h3-font-weight);
+}
+
+.heading-h4 {
+    font-family: var(--font-family);
+    
+    font-size: var(--heading-h4-size);
+    line-height: var(--heading-h4-line-height);
+    font-weight: var(--heading-h4-font-weight);
+}
+
+.heading-h5 {
+    font-size: var(--heading-h5-size);
+    line-height: var(--heading-h5-line-height);
+    font-weight: var(--heading-h5-font-weight);
+}
+
+.heading-h6 {
+    font-family: var(--font-family);
+    font-size: var(--heading-h6-size);
+    line-height: var(--heading-h6-line-height);
+    font-weight: var(--heading-h6-font-weight);
+}
+
+/*heading-end*/
+
+/*other-typography-start*/
+
+.subtitle {
+    font-size: var(--subtitle-size);
+    line-height: var(--subtitle-line-height);
+    font-weight: var(--subtitle-font-weight);
+}
+
+.body {
+    font-size: var(--body-size);
+    line-height: var(--body-line-height);
+    font-weight: var(--body-font-weight);
+}
+
+.button {
+    font-size: var(--button-size);
+    line-height: var(--button-line-height);
+    font-weight: var(--button-font-weight);
+}
+
+.link {
+    font-size: var(--link-size);
+    line-height: var(--link-line-height);
+    font-weight: var(--link-font-weight);
+}
+
+.overline {
+    font-size: var(--overline-size);
+    line-height: var(--overline-line-height);
+    font-weight: var(--overline-font-weight);
+}
+
+.caption {
+    font-size: var(--caption-size);
+    line-height: var(--caption-line-height);
+    font-weight: var(--caption-font-weight);
+}
+
+.caption-small {
+    font-size: var(--caption-small-size);
+    line-height: var(--caption-small-line-height);
+    font-weight: var(--caption-small-font-weight);
+}
+
+@media screen and (max-width: 1024px) {
+
+    :root {
+
+        /*heading-start*/
+
+        --heading-h1-size: 40px;
+        --heading-h1-line-height: 120%;
+        --heading-h1-font-weight: 500;
+    
+        --heading-h2-size: 34px;
+        --heading-h2-line-height: 120%;
+        --heading-h2-font-weight: 400;
+    
+        --heading-h3-size: 26px;
+        --heading-h3-line-height: 120%;
+        --heading-h3-font-weight: 400;
+    
+        --heading-h4-size: 22px;
+        --heading-h4-line-height: 120%;
+        --heading-h4-font-weight: 400;
+    
+        --heading-h5-size: 18px;
+        --heading-h5-line-height: 120%;
+        --heading-h5-font-weight: 500;
+    
+        --heading-h6-size: 16px;
+        --heading-h6-line-height: 100%;
+        --heading-h6-font-weight: 400;
+
+        /*heading-end*/
+
+        /*other-typography-start*/
+        
+        --subtitle-size: 18px;
+        --subtitle-line-height: 140%;
+        --subtitle-font-weight: 400;
+    
+        --body-size: 16px;
+        --body-line-height: 140%;
+        --body-font-weight: 400;
+    
+        --button-size: 14px;
+        --button-line-height: 100%;
+        --button-font-weight: 500;
+    
+        --link-size: 14px;
+        --link-line-height: 120%;
+        --link-font-weight: 500;
+    
+        --overline-size: 12px;
+        --overline-line-height: 120%;
+        --overline-font-weight: 500;
+    
+        --caption-size: 14px;
+        --caption-line-height: 120%;
+        --caption-font-weight: 400;
+    
+        --caption-small-size: 12px;
+        --caption-small-line-height: 120%;
+        --caption-small-font-weight: 500;
+    
+        /*other-typography-end*/
+
+    }
+
+}

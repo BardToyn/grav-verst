@@ -1,0 +1,41 @@
+.header {
+
+}
+
+.header-logo {
+
+}
+
+.header-logo__img {
+
+}
+
+.header-nav {
+
+}
+
+.header-link {
+
+}
+
+.header-list {
+
+}
+
+.header-item {
+
+}
+
+.header-phone::before {
+    content: "";
+
+    display: block;
+    height: 64px;
+    width: 64px;
+
+    background: no-repeat url(../../icons/phone.svg) center / cover;
+}
+
+.header-phone__text {
+    
+}

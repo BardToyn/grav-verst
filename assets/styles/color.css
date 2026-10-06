@@ -1,0 +1,18 @@
+:root {
+
+    /*brand-colors-start*/
+
+    --clr-white: #FFFFFF;
+    --clr-black: #2E2E2E;
+
+    /*brand-colors-end*/
+
+}
+
+.white {
+    color: var(--clr-white);
+}
+
+.black {
+    color: var(--clr-black);
+}
