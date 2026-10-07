@@ -1,3 +1,16 @@
 @import url(./normalize.css);
 @import url(./fonts.css);
 @import url(./color.css);
+
+.container {
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+@media screen and (max-width: 1024px) {
+    
+    .container {
+        max-width: 80%;
+    }
+
+}

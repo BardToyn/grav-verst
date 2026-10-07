@@ -35,7 +35,7 @@
 
     --subtitle-size: calc(18 / 1440 * 100vw);/*webkit and firefox*/
     --subtitle-line-height: 140%;
-    --subtitle-font-weight: 400;
+    --subtitle-font-weight: 500;
 
     --body-size: calc(16 / 1440 * 100vw);/*webkit and firefox*/
     --body-line-height: 140%;
@@ -47,7 +47,7 @@
 
     --link-size: calc(16 / 1440 * 100vw);/*webkit and firefox*/
     --link-line-height: 120%;
-    --link-font-weight: 500;
+    --link-font-weight: 400;
 
     --overline-size: calc(14 / 1440 * 100vw);/*webkit and firefox*/
     --overline-line-height: 120%;
@@ -57,9 +57,9 @@
     --caption-line-height: 120%;
     --caption-font-weight: 400;
 
-    --caption-small-size: calc(14 / 1440 * 100vw);/*webkit and firefox*/
+    --caption-small-size: calc(12 / 1440 * 100vw);/*webkit and firefox*/
     --caption-small-line-height: 120%;
-    --caption-small-font-weight: 500;
+    --caption-small-font-weight: 400;
 
     /*other-typography-end*/
 

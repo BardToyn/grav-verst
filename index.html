@@ -9,100 +9,451 @@
 </head>
 <body>
     <header class="header">
-        <a href="#" class="header-logo">
-            <img src="assets/icons/logo.webp" alt="" class="header-logo__img">
-        </a>
-        <nav class="header-nav">
-            <a href="#" class="header-link link black">
-                Каталог
-            </a>
-            <a href="#" class="header-link link black">
-                Услуги
-            </a>
-            <a href="#" class="header-link link black">
-                Портфолио
-            </a>
-            <a href="#" class="header-link link black">
-                Отзывы
-            </a>
-            <a href="#" class="header-link link black">
-                Материалы
-            </a>
-            <a href="#" class="header-link link black">
-                Контакты
-            </a>
-        </nav>
-        <ul class="header-list">
-            <li class="header-item">
-                <a href="#" class="header-link">
-                    <svg class="header-link__social-icon" 
-                         viewBox="0 0 248 248"
-                         xmlns="http://www.w3.org/2000/svg" 
-                         width="32" 
-                         height="32" 
-                         fill="none"
-                    >
-                        <path fill="#2AABEE" d="M0 0h248v248H0z"/>
-                        <path fill="#fff" d="M129.362 93.057q-16.659 6.93-66.588 28.682-8.107 3.225-8.494 6.308c-.436 3.475 3.916 4.844 9.842 6.707l.12.038q1.155.361 2.377.756c5.83 1.895 13.672 4.113 17.749 4.201q5.547.12 12.382-4.574 46.65-31.491 48.162-31.833c.711-.162 1.696-.365 2.364.228.668.594.602 1.718.531 2.019-.431 1.838-17.512 17.718-26.351 25.936l-.074.068c-2.717 2.526-4.64 4.315-5.037 4.726-.894.93-1.807 1.81-2.684 2.655-5.415 5.221-9.477 9.136.226 15.53 4.649 3.064 8.373 5.6 12.085 8.128l.031.02c4.064 2.768 8.119 5.53 13.365 8.968 1.336.876 2.613 1.787 3.856 2.673 4.731 3.372 8.981 6.402 14.232 5.919 3.051-.281 6.202-3.149 7.803-11.706 3.782-20.221 11.218-64.035 12.936-82.09.15-1.582-.039-3.606-.191-4.495-.152-.888-.47-2.155-1.625-3.092-1.368-1.11-3.48-1.344-4.424-1.328-4.295.076-10.884 2.367-42.593 15.556"/>
-                    </svg>
+        <div class="container">
+            <div class="header__wrap">
+                <a href="#" class="header-logo">
+                    <img src="assets/icons/logo.webp" alt="" class="header-logo__img">
                 </a>
-            </li>
-            <li class="header-item">
-                <a href="#" class="header-link">
-                    <svg class="header-link__social-icon"
-                         viewBox="0 0 500 500" 
-                         xmlns="http://www.w3.org/2000/svg" 
-                         width="32" 
-                         height="32" 
-                         fill="none"
-                    >
-                        <path fill="url(#a)" d="M0 0h500v500H0z"/>
-                        <path fill="url(#b)" d="M0 0h500v500H0z"/>
-                        <path fill="#fff" fill-rule="evenodd" d="M253.223 398.85c-29.441 0-43.123-4.298-66.905-21.49-15.043 19.341-62.679 34.456-64.756 8.596 0-19.412-4.298-35.816-9.17-53.725C106.59 310.168 100 285.598 100 249.997 100 164.968 169.771 101 252.435 101c82.736 0 147.564 67.12 147.564 149.784.278 81.386-65.391 147.632-146.776 148.066m1.218-224.355c-40.258-2.077-71.633 25.788-78.582 69.484-5.73 36.175 4.442 80.229 13.109 82.522 4.155 1.002 14.613-7.45 21.132-13.969a74.5 74.5 0 0 0 36.39 12.966c41.713 2.006 77.356-29.75 80.157-71.418 1.63-41.756-30.487-77.123-72.206-79.513z" clip-rule="evenodd"/>
-                            <defs>
-                                <radialGradient id="b" cx="0" cy="0" r="1" gradientTransform="matrix(378.9086 473.90374 -195.26028 156.1199 -11.895 -219.593)" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#00F"/>
-                                    <stop offset="1" stop-opacity="0"/>
-                                </radialGradient>
-                                <linearGradient id="a" x1="58.923" x2="500" y1="380.268" y2="250" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#4CF"/>
-                                    <stop offset=".662" stop-color="#53E"/>
-                                    <stop offset="1" stop-color="#93D"/>
-                                </linearGradient>
-                            </defs>
-                    </svg>
+                <nav class="header-nav">
+                    <a href="#" class="header-link link black">
+                        Каталог
+                    </a>
+                    <a href="#" class="header-link link black">
+                        Услуги
+                    </a>
+                    <a href="#" class="header-link link black">
+                        Портфолио
+                    </a>
+                    <a href="#" class="header-link link black">
+                        Отзывы
+                    </a>
+                    <a href="#" class="header-link link black">
+                        Материалы
+                    </a>
+                    <a href="#" class="header-link link black">
+                        Контакты
+                    </a>
+                </nav>
+                <ul class="header-list">
+                    <li class="header-item">
+                        <a href="#" class="header-link__social">
+                            <svg class="header-link__social-icon" 
+                                 viewBox="0 0 248 248"
+                                 xmlns="http://www.w3.org/2000/svg" 
+                                 width="32" 
+                                 height="32" 
+                                 fill="none"
+                            >
+                                <path fill="#2AABEE" d="M0 0h248v248H0z"/>
+                                <path fill="#fff" d="M129.362 93.057q-16.659 6.93-66.588 28.682-8.107 3.225-8.494 6.308c-.436 3.475 3.916 4.844 9.842 6.707l.12.038q1.155.361 2.377.756c5.83 1.895 13.672 4.113 17.749 4.201q5.547.12 12.382-4.574 46.65-31.491 48.162-31.833c.711-.162 1.696-.365 2.364.228.668.594.602 1.718.531 2.019-.431 1.838-17.512 17.718-26.351 25.936l-.074.068c-2.717 2.526-4.64 4.315-5.037 4.726-.894.93-1.807 1.81-2.684 2.655-5.415 5.221-9.477 9.136.226 15.53 4.649 3.064 8.373 5.6 12.085 8.128l.031.02c4.064 2.768 8.119 5.53 13.365 8.968 1.336.876 2.613 1.787 3.856 2.673 4.731 3.372 8.981 6.402 14.232 5.919 3.051-.281 6.202-3.149 7.803-11.706 3.782-20.221 11.218-64.035 12.936-82.09.15-1.582-.039-3.606-.191-4.495-.152-.888-.47-2.155-1.625-3.092-1.368-1.11-3.48-1.344-4.424-1.328-4.295.076-10.884 2.367-42.593 15.556"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="header-item">
+                        <a href="#" class="header-link__social">
+                            <svg class="header-link__social-icon"
+                                 viewBox="0 0 500 500" 
+                                 xmlns="http://www.w3.org/2000/svg" 
+                                 width="32" 
+                                 height="32" 
+                                 fill="none"
+                            >
+                                <path fill="url(#a)" d="M0 0h500v500H0z"/>
+                                <path fill="url(#b)" d="M0 0h500v500H0z"/>
+                                <path fill="#fff" fill-rule="evenodd" d="M253.223 398.85c-29.441 0-43.123-4.298-66.905-21.49-15.043 19.341-62.679 34.456-64.756 8.596 0-19.412-4.298-35.816-9.17-53.725C106.59 310.168 100 285.598 100 249.997 100 164.968 169.771 101 252.435 101c82.736 0 147.564 67.12 147.564 149.784.278 81.386-65.391 147.632-146.776 148.066m1.218-224.355c-40.258-2.077-71.633 25.788-78.582 69.484-5.73 36.175 4.442 80.229 13.109 82.522 4.155 1.002 14.613-7.45 21.132-13.969a74.5 74.5 0 0 0 36.39 12.966c41.713 2.006 77.356-29.75 80.157-71.418 1.63-41.756-30.487-77.123-72.206-79.513z" clip-rule="evenodd"/>
+                                    <defs>
+                                        <radialGradient id="b" cx="0" cy="0" r="1" gradientTransform="matrix(378.9086 473.90374 -195.26028 156.1199 -11.895 -219.593)" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#00F"/>
+                                            <stop offset="1" stop-opacity="0"/>
+                                        </radialGradient>
+                                        <linearGradient id="a" x1="58.923" x2="500" y1="380.268" y2="250" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#4CF"/>
+                                            <stop offset=".662" stop-color="#53E"/>
+                                            <stop offset="1" stop-color="#93D"/>
+                                        </linearGradient>
+                                    </defs>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="header-item">
+                        <a href="#" class="header-link__social">
+                            <svg class="header-link__social-icon"
+                                 viewBox="0 0 32 32" 
+                                 xmlns="http://www.w3.org/2000/svg" 
+                                 width="32" 
+                                 height="32" 
+                                 fill="none"
+                            >
+                                <path fill="#07F" d="M0 0h32v32H0z"/>
+                                <path fill="#fff" d="M16.8 21.615c-6.15 0-9.656-4.208-9.8-11.22h3.093c.099 5.142 2.364 7.318 4.163 7.767v-7.768h2.904v4.433c1.771-.19 3.641-2.212 4.27-4.442h2.896a8.57 8.57 0 0 1-3.938 5.602A8.87 8.87 0 0 1 25 21.615h-3.192c-.683-2.131-2.391-3.785-4.648-4.01v4.01h-.36"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <a class="header-phone" href="tel:+79885147010">
+                    <div class="header-phone__text">
+                        <span class="subtitle black">+7 (988) 514-70-10</span>
+                        <span class="caption-small gray">в любое время</span>
+                    </div>
                 </a>
-            </li>
-            <li class="header-item">
-                <a href="#" class="header-link">
-                    <svg class="header-link__social-icon"
-                         viewBox="0 0 32 32" 
-                         xmlns="http://www.w3.org/2000/svg" 
-                         width="32" 
-                         height="32" 
-                         fill="none"
-                    >
-                        <path fill="#07F" d="M0 0h32v32H0z"/>
-                        <path fill="#fff" d="M16.8 21.615c-6.15 0-9.656-4.208-9.8-11.22h3.093c.099 5.142 2.364 7.318 4.163 7.767v-7.768h2.904v4.433c1.771-.19 3.641-2.212 4.27-4.442h2.896a8.57 8.57 0 0 1-3.938 5.602A8.87 8.87 0 0 1 25 21.615h-3.192c-.683-2.131-2.391-3.785-4.648-4.01v4.01h-.36"/>
-                    </svg>
-                </a>
-            </li>
-        </ul>
-        <a class="header-phone" href="tel:+79885147010">
-            <div class="header-phone__text">
-                <span class="subtitle black">+7 (988) 514-70-10</span>
-                <span class="caption-small gray">в любое время</span>
+                <button class="header-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#2E2E2E"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                </button>
             </div>
-        </a>
+        </div>
     </header>
 
     <main class="main">
-
+        <section class="hero">
+            <div class="container">
+                <div class="hero__wrap">
+                    <div class="hero-content">
+                        <strong>
+                            Мастерская памятников
+                        </strong>
+                        <h1>
+                            Памятники из гранита и мрамора с бережным отношением к памяти
+                        </h1>
+                        <p>
+                            Собственное производство, гарантия 10 лет и бесплатный выезд специалиста. Спокойно поможем выбрать, подготовим макет и возьмём на себя все заботы по установке.
+                        </p>
+                        <div class="hero-btns">
+                            <button>Рассчитать стоимость</button>
+                            <a href="#">Смотреть каталог</a>
+                        </div>
+                    </div>
+                    <picture>
+                        <img src="assets/images/hero-img.webp" alt="Памятники из гранита и мрамора">
+                    </picture>
+                </div>
+            </div>
+        </section>
+        <section class="advantage">
+            <article class="section-article">
+                <strong class="section-article__subtitle">
+                    Почему нам доверяют
+                </strong>
+                <h2 class="section-article__title">
+                    Заботимся о каждой детали
+                </h2>
+                <p class="section-article__text">
+                    Мы понимаем, в какой момент к нам обращаются, поэтому работаем спокойно, честно и без навязывания.
+                </p>
+            </article>
+            <div class="advantage-list">
+                <div class="advantage-item">
+                    <!--vector-->
+                    <h3 class="advantage-item__title">
+                        Собственное производство
+                    </h3>
+                    <p class="advantage-item__subtitle">
+                        Цех площадью 1 200 м² и склад камня. Без посредников — честная цена и контроль качества на каждом этапе.
+                    </p>
+                </div>
+                <div class="advantage-item">
+                    <!--vector-->
+                    <h3 class="advantage-item__title">
+                        Индивидуальный подход
+                    </h3>
+                    <p class="advantage-item__subtitle">
+                        Выслушаем пожелания семьи, предложим варианты под любой бюджет и никогда не станем торопить с решением.
+                    </p>
+                </div>
+                <div class="advantage-item">
+                    <!--vector-->
+                    <h3 class="advantage-item__title">
+                        Любые материалы
+                    </h3>
+                    <p class="advantage-item__subtitle">
+                        Габбро-диабаз, карельский и красный гранит, белый мрамор, комбинированные решения — более 20 видов камня.
+                    </p>
+                </div>
+                <div class="advantage-item">
+                    <!--vector-->
+                    <h3 class="advantage-item__title">
+                        Доставка и установка «под ключ»
+                    </h3>
+                    <p class="advantage-item__subtitle">
+                        Бережно доставим, подготовим основание, установим и благоустроим участок. Уберём за собой.
+                    </p>
+                </div>
+                <div class="advantage-item">
+                    <!--vector-->
+                    <h3 class="advantage-item__title">
+                        Гарантия 10 лет
+                    </h3>
+                    <p class="advantage-item__subtitle">
+                        Официальный договор и гарантия на камень, гравировку и монтаж. Если что-то случится — приедем и исправим.
+                    </p>
+                </div>
+                <div class="advantage-item">
+                    <!--vector-->
+                    <h3 class="advantage-item__title">
+                        Помощь в выборе и макете
+                    </h3>
+                    <p class="advantage-item__subtitle">
+                        Художник бесплатно подготовит 3D-макет с надписью и портретом, чтобы вы увидели памятник заранее.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="catalog">
+            <article class="section-article-row">
+                <div class="article-row__item">
+                    <p class="article-row__subtitle">
+                        Каталог
+                    </p>
+                    <h2 class="article-row__title">
+                        Категория памятников
+                    </h2>
+                </div>
+                <div class="article-row__control">
+                    <a href="#" class="link-arrow link">
+                        Весь каталог
+                    </a>
+                </div>
+            </article>
+            <div class="category-list">
+                <div class="category-item">
+                    <img src="" alt="" class="category-item__img">
+                    <article class="category-item__article">
+                        <h4 class="category-item__title">
+                            Одиночные памятники
+                        </h4>
+                        <p class="category-item__price">
+                            от 18 000 ₽
+                        </p>
+                        <a href="#" class="link link-arrow category-item__link">
+                            Перейти в раздел
+                        </a>
+                    </article>
+                </div>
+                <div class="category-item">
+                    <img src="" alt="" class="category-item__img">
+                    <article class="category-item__article">
+                        <h4 class="category-item__title">
+                            Одиночные памятники
+                        </h4>
+                        <p class="category-item__price">
+                            от 18 000 ₽
+                        </p>
+                        <a href="#" class="link link-arrow category-item__link">
+                            Перейти в раздел
+                        </a>
+                    </article>
+                </div>
+                <div class="category-item">
+                    <img src="" alt="" class="category-item__img">
+                    <article class="category-item__article">
+                        <h4 class="category-item__title">
+                            Одиночные памятники
+                        </h4>
+                        <p class="category-item__price">
+                            от 18 000 ₽
+                        </p>
+                        <a href="#" class="link link-arrow category-item__link">
+                            Перейти в раздел
+                        </a>
+                    </article>
+                </div>
+                <div class="category-item">
+                    <img src="" alt="" class="category-item__img">
+                    <article class="category-item__article">
+                        <h4 class="category-item__title">
+                            Одиночные памятники
+                        </h4>
+                        <p class="category-item__price">
+                            от 18 000 ₽
+                        </p>
+                        <a href="#" class="link link-arrow category-item__link">
+                            Перейти в раздел
+                        </a>
+                    </article>
+                </div>
+                <div class="category-item">
+                    <img src="" alt="" class="category-item__img">
+                    <article class="category-item__article">
+                        <h4 class="category-item__title">
+                            Одиночные памятники
+                        </h4>
+                        <p class="category-item__price">
+                            от 18 000 ₽
+                        </p>
+                        <a href="#" class="link link-arrow category-item__link">
+                            Перейти в раздел
+                        </a>
+                    </article>
+                </div>
+                <div class="category-item">
+                    <img src="" alt="" class="category-item__img">
+                    <article class="category-item__article">
+                        <h4 class="category-item__title">
+                            Одиночные памятники
+                        </h4>
+                        <p class="category-item__price">
+                            от 18 000 ₽
+                        </p>
+                        <a href="#" class="link link-arrow category-item__link">
+                            Перейти в раздел
+                        </a>
+                    </article>
+                </div>
+                <div class="category-item">
+                    <img src="" alt="" class="category-item__img">
+                    <article class="category-item__article">
+                        <h4 class="category-item__title">
+                            Одиночные памятники
+                        </h4>
+                        <p class="category-item__price">
+                            от 18 000 ₽
+                        </p>
+                        <a href="#" class="link link-arrow category-item__link">
+                            Перейти в раздел
+                        </a>
+                    </article>
+                </div>
+                <div class="category-item">
+                    <img src="" alt="" class="category-item__img">
+                    <article class="category-item__article">
+                        <h4 class="category-item__title">
+                            Одиночные памятники
+                        </h4>
+                        <p class="category-item__price">
+                            от 18 000 ₽
+                        </p>
+                        <a href="#" class="link link-arrow category-item__link">
+                            Перейти в раздел
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-
+        <div class="footer-top">
+            <div class="footer-top__info">
+                <a href="#" class="footer-logo">
+                    <img src="assets/icons/logo.webp" alt="" class="footer-logo__img">
+                </a>
+                <p class="footer-text">
+                    Изготавливаем памятники из гранита и мрамора с 2005 года. С уважением к памяти и заботой о каждой семье.
+                </p>
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <a href="#" class="footer-link">
+                            <svg class="footer-link__social-icon" 
+                                 viewBox="0 0 248 248"
+                                 xmlns="http://www.w3.org/2000/svg" 
+                                 width="32" 
+                                 height="32" 
+                                 fill="none"
+                            >
+                                <path fill="#2AABEE" d="M0 0h248v248H0z"/>
+                                <path fill="#fff" d="M129.362 93.057q-16.659 6.93-66.588 28.682-8.107 3.225-8.494 6.308c-.436 3.475 3.916 4.844 9.842 6.707l.12.038q1.155.361 2.377.756c5.83 1.895 13.672 4.113 17.749 4.201q5.547.12 12.382-4.574 46.65-31.491 48.162-31.833c.711-.162 1.696-.365 2.364.228.668.594.602 1.718.531 2.019-.431 1.838-17.512 17.718-26.351 25.936l-.074.068c-2.717 2.526-4.64 4.315-5.037 4.726-.894.93-1.807 1.81-2.684 2.655-5.415 5.221-9.477 9.136.226 15.53 4.649 3.064 8.373 5.6 12.085 8.128l.031.02c4.064 2.768 8.119 5.53 13.365 8.968 1.336.876 2.613 1.787 3.856 2.673 4.731 3.372 8.981 6.402 14.232 5.919 3.051-.281 6.202-3.149 7.803-11.706 3.782-20.221 11.218-64.035 12.936-82.09.15-1.582-.039-3.606-.191-4.495-.152-.888-.47-2.155-1.625-3.092-1.368-1.11-3.48-1.344-4.424-1.328-4.295.076-10.884 2.367-42.593 15.556"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#" class="footer-link">
+                            <svg class="footer-link__social-icon"
+                                 viewBox="0 0 500 500" 
+                                 xmlns="http://www.w3.org/2000/svg" 
+                                 width="32" 
+                                 height="32" 
+                                 fill="none"
+                            >
+                                <path fill="url(#a)" d="M0 0h500v500H0z"/>
+                                <path fill="url(#b)" d="M0 0h500v500H0z"/>
+                                <path fill="#fff" fill-rule="evenodd" d="M253.223 398.85c-29.441 0-43.123-4.298-66.905-21.49-15.043 19.341-62.679 34.456-64.756 8.596 0-19.412-4.298-35.816-9.17-53.725C106.59 310.168 100 285.598 100 249.997 100 164.968 169.771 101 252.435 101c82.736 0 147.564 67.12 147.564 149.784.278 81.386-65.391 147.632-146.776 148.066m1.218-224.355c-40.258-2.077-71.633 25.788-78.582 69.484-5.73 36.175 4.442 80.229 13.109 82.522 4.155 1.002 14.613-7.45 21.132-13.969a74.5 74.5 0 0 0 36.39 12.966c41.713 2.006 77.356-29.75 80.157-71.418 1.63-41.756-30.487-77.123-72.206-79.513z" clip-rule="evenodd"/>
+                                    <defs>
+                                        <radialGradient id="b" cx="0" cy="0" r="1" gradientTransform="matrix(378.9086 473.90374 -195.26028 156.1199 -11.895 -219.593)" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#00F"/>
+                                            <stop offset="1" stop-opacity="0"/>
+                                        </radialGradient>
+                                        <linearGradient id="a" x1="58.923" x2="500" y1="380.268" y2="250" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#4CF"/>
+                                            <stop offset=".662" stop-color="#53E"/>
+                                            <stop offset="1" stop-color="#93D"/>
+                                        </linearGradient>
+                                    </defs>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#" class="footer-link">
+                            <svg class="footer-link__social-icon"
+                                 viewBox="0 0 32 32" 
+                                 xmlns="http://www.w3.org/2000/svg" 
+                                 width="32" 
+                                 height="32" 
+                                 fill="none"
+                            >
+                                <path fill="#07F" d="M0 0h32v32H0z"/>
+                                <path fill="#fff" d="M16.8 21.615c-6.15 0-9.656-4.208-9.8-11.22h3.093c.099 5.142 2.364 7.318 4.163 7.767v-7.768h2.904v4.433c1.771-.19 3.641-2.212 4.27-4.442h2.896a8.57 8.57 0 0 1-3.938 5.602A8.87 8.87 0 0 1 25 21.615h-3.192c-.683-2.131-2.391-3.785-4.648-4.01v4.01h-.36"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <nav class="footer-nav">
+                <h3 class="footer-title">
+                    Разделы
+                </h3>
+                <a href="#" class="footer-nav__link">Каталог</a>
+                <a href="#" class="footer-nav__link">Услуги</a>
+                <a href="#" class="footer-nav__link">Портфолио</a>
+                <a href="#" class="footer-nav__link">Отзывы</a>
+                <a href="#" class="footer-nav__link">Материалы</a>
+                <a href="#" class="footer-nav__link">Контакты</a>
+            </nav>
+            <nav class="footer-nav">
+                <h3 class="footer-title">
+                    Каталог
+                </h3>
+                <a href="#" class="footer-nav__link">Одиночные памятники</a>
+                <a href="#" class="footer-nav__link">Двойные памятники</a>
+                <a href="#" class="footer-nav__link">Семейные комплексы</a>
+                <a href="#" class="footer-nav__link">Детские памятники</a>
+                <a href="#" class="footer-nav__link">Ограды и цоколи</a>
+                <a href="#" class="footer-nav__link">Аксессуары</a>
+            </nav>
+            <nav class="footer-nav">
+                <h3 class="footer-title">
+                    Контакты
+                </h3>
+                <a href="tel:+74951234567" class="footer-nav__link">
+                    +7 (495) 123-45-67
+                </a>
+                <a href="mailto:info@gravis.ru" class="footer-nav__link">
+                    info@gravis.ru
+                </a>
+                <a href="#" class="footer-nav__link">
+                    Планетная ул., 38, микрорайон Северный, Ростов-на-Дону
+                </a>
+                <p class="footer-nav__link">
+                    Пн–Пт: 9:00–20:00, Сб–Вс: 10:00–18:00
+                </p>
+                <p class="footer-nav__link">
+                    ООО «Гравис», ИНН 7700000000, ОГРН 1057700000000
+                </p>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copyright">
+                © 2005–2026 Гравис. Все права защищены.  Разработка и поддержка tkacheev.ru
+            </p>
+            <nav class="footer-nav__docs">
+                <a href="#" class="footer-nav-docs__link">
+                    Политика конфиденциальности
+                </a>
+                <a href="#" class="footer-nav-docs__link">
+                    Пользовательское соглашение
+                </a>
+            </nav>
+        </div>
     </footer>
     <script src="assets/scripts/textWalker.js"></script>
+    <script src="assets/scripts/header.js"></script>
 </body>
 </html>
