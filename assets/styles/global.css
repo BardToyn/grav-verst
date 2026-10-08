@@ -1,9 +1,41 @@
 @import url(./normalize.css);
 @import url(./fonts.css);
 @import url(./color.css);
+@import url(./button.css);
+
+:root {
+
+    /*layout-start*/
+
+    --section-y: calc(100 / 1440 * 100vw);
+    --section-gap: calc(48 / 1440 * 100vw);
+    --card-radius: calc(16 / 1440 * 100vw);
+
+    --shadow: 0 4px 20px rgba(0, 0, 0, .06);
+    --shadow-hover: 0 8px 28px rgba(0, 0, 0, .08);
+
+    /*layout-end*/
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background-color: var(--clr-milk);
+}
+
+body.is-locked {
+    overflow: hidden;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+section[id] {
+    scroll-margin-top: calc(100 / 1440 * 100vw);
 }
 
 .container {
@@ -12,9 +44,28 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
+
+    :root {
+        --section-y: 72px;
+        --section-gap: 40px;
+        --card-radius: 16px;
+    }
+
+    section[id] {
+        scroll-margin-top: 90px;
+    }
     
     .container {
-        max-width: 80%;
+        max-width: 85%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    :root {
+        --section-y: 48px;
+        --section-gap: 32px;
     }
 
 }

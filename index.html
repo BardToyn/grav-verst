@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles/global.css">
     <link rel="stylesheet" href="assets/styles/components/header.css">
+    <link rel="stylesheet" href="assets/styles/components/footer.css">
+    <link rel="stylesheet" href="assets/styles/components/form.css">
+    <link rel="stylesheet" href="assets/styles/components/modal.css">
     <link rel="stylesheet" href="assets/styles/main.css">
     <title>Gravis</title>
 </head>
@@ -97,12 +100,97 @@
                         <span class="caption-small gray">в любое время</span>
                     </div>
                 </a>
-                <button class="header-btn">
+                <button class="header-btn" aria-label="burger button">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#2E2E2E"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
                 </button>
             </div>
         </div>
     </header>
+
+    <!--mobile menu-->
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu__overlay"></div>
+        <div class="mobile-menu__content">
+            <div class="mobile-menu__header">
+                <a href="#" class="header-logo">
+                    <img src="assets/icons/logo.webp" alt="" class="header-logo__img">
+                </a>
+                <button class="mobile-menu__close" id="mobileMenuClose">
+                    <span class="close-icon">
+                        <span class="close-line"></span>
+                        <span class="close-line"></span>
+                    </span>
+                </button>
+            </div>
+            <nav class="mobile-menu__nav">
+                <a href="#" class="mobile-menu__link link black">
+                    Каталог
+                </a>
+                <a href="#" class="mobile-menu__link link black">
+                    Услуги
+                </a>
+                <a href="#" class="mobile-menu__link link black">
+                    Портфолио
+                </a>
+                <a href="#" class="mobile-menu__link link black">
+                    Отзывы
+                </a>
+            </nav>
+            <div class="mobile-menu__actions">
+                <button>Оставить заявку</button>
+            </div>
+            <div class="mobile-menu__contact">
+                <div class="header__contact-item">
+                    <p class="header__contact-item heading-h6 black">
+                        Отдел продаж:
+                    </p>
+                    <a href="tel:88005553555" class="header__contact-item link black">
+                        +7 (800) 555-35-55
+                    </a>
+                </div>
+
+                <div class="header__contact-item">
+                    <p class="header__contact-item heading-h6 black">
+                        Email:
+                    </p>
+                    <a href="mailto:mail@mail.ru" class="header__contact-item link black">
+                        example@mail.ru
+                    </a>
+                </div>
+                <div class="header__contact-item">
+                    <p class="header__contact-item heading-h6 black">
+                        Адрес:
+                    </p>
+                    <a href="#" class="header__contact-item link black">
+                        Ул. Ленина, 123
+                    </a>
+                </div>
+                <div class="header__contact-item">
+                    <p class="header__contact-item heading-h6 black">
+                        Режим работы:
+                    </p>
+                    <p class="header__contact-item link black">
+                        с 18:00 до 22:00
+                    </p>
+                </div>
+                <div class="header__contact-item">
+                    <p class="header__contact-item heading-h6 black">
+                        Мы в соц. сетях:
+                    </p>
+
+                    <div class="header__contact-social list">
+                        <a href="#" class="header__contact-social item" target="_blank" rel="noopener noreferrer">
+                            <img class="header__contact-social" 
+                                    src="assets/icons/vk.svg" 
+                                    alt="">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main class="main">
         <section class="hero">
@@ -114,14 +202,14 @@
                                 Мастерская памятников
                             </p>
                             <h1 class="hero-content__title heading-h2 black">
-                                Памятники из гранита и мрамора с бережным отношением к памяти
+                                Памятники из гранита и мрамора с бережным отношением к памяти
                             </h1>
                             <p class="hero-content__text body gray">
-                                Собственное производство, гарантия 10 лет и бесплатный выезд специалиста. Спокойно поможем выбрать, подготовим макет и возьмём на себя все заботы по установке.
+                                Собственное производство, гарантия 10 лет и бесплатный выезд специалиста. Спокойно поможем выбрать, подготовим макет и возьмём на себя все заботы по установке.
                             </p>
                             <div class="hero-btns">
-                                <button class="btn button button-primary">Рассчитать стоимость</button>
-                                <a class="btn button button-primary" href="#">Смотреть каталог</a>
+                                <button class="btn button button-primary button-calc">Рассчитать стоимость</button>
+                                <a class="btn button button-secondary" href="#">Смотреть каталог</a>
                             </div>
                         </div>
                     </div>
@@ -131,332 +219,1770 @@
                 </div>
             </div>
         </section>
-        <section class="advantage">
-            <article class="section-article">
-                <strong class="section-article__subtitle">
-                    Почему нам доверяют
-                </strong>
-                <h2 class="section-article__title">
-                    Заботимся о каждой детали
-                </h2>
-                <p class="section-article__text">
-                    Мы понимаем, в какой момент к нам обращаются, поэтому работаем спокойно, честно и без навязывания.
-                </p>
-            </article>
-            <div class="advantage-list">
-                <div class="advantage-item">
-                    <!--vector-->
-                    <h3 class="advantage-item__title">
-                        Собственное производство
-                    </h3>
-                    <p class="advantage-item__subtitle">
-                        Цех площадью 1 200 м² и склад камня. Без посредников — честная цена и контроль качества на каждом этапе.
-                    </p>
+
+        <!--section advantage-->
+
+        <section class="advantage" id="advantage">
+            <div class="container">
+                <div class="advantage__wrap">
+                    <article class="section-article">
+                        <p class="section-article__subtitle subtitle green">
+                            Почему нам доверяют
+                        </p>
+                        <h2 class="section-article__title heading-h2 black">
+                            Заботимся о каждой детали
+                        </h2>
+                        <p class="section-article__text body gray">
+                            Мы понимаем, в какой момент к нам обращаются, поэтому работаем спокойно, честно и без навязывания.
+                        </p>
+                    </article>
+                    <div class="advantage-list">
+                        <div class="advantage-item">
+                            <span class="advantage-item__icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 21h18M5 21V10l5 3v-3l5 3V6l4-2v17"/>
+                                    <path d="M9 17h1M13 17h1"/>
+                                </svg>
+                            </span>
+                            <h3 class="advantage-item__title heading-h5 black">
+                                Собственное производство
+                            </h3>
+                            <p class="advantage-item__subtitle body gray">
+                                Цех площадью 1 200 м² и склад камня. Без посредников — честная цена и контроль качества на каждом этапе.
+                            </p>
+                        </div>
+                        <div class="advantage-item">
+                            <span class="advantage-item__icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 7.5 2.8C19.5 15.4 12 20 12 20z"/>
+                                </svg>
+                            </span>
+                            <h3 class="advantage-item__title heading-h5 black">
+                                Индивидуальный подход
+                            </h3>
+                            <p class="advantage-item__subtitle body gray">
+                                Выслушаем пожелания семьи, предложим варианты под любой бюджет и никогда не станем торопить с решением.
+                            </p>
+                        </div>
+                        <div class="advantage-item">
+                            <span class="advantage-item__icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6.5 4h11l3.5 5-9 11L3 9z"/>
+                                    <path d="M3 9h18M12 20L8.5 9 10 4M12 20l3.5-11L14 4"/>
+                                </svg>
+                            </span>
+                            <h3 class="advantage-item__title heading-h5 black">
+                                Любые материалы
+                            </h3>
+                            <p class="advantage-item__subtitle body gray">
+                                Габбро-диабаз, карельский и красный гранит, белый мрамор, комбинированные решения — более 20 видов камня.
+                            </p>
+                        </div>
+                        <div class="advantage-item">
+                            <span class="advantage-item__icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 6h11v10H3z"/>
+                                    <path d="M14 9.5h3.5L21 13v3h-7"/>
+                                    <circle cx="7" cy="17.5" r="1.8"/>
+                                    <circle cx="17" cy="17.5" r="1.8"/>
+                                </svg>
+                            </span>
+                            <h3 class="advantage-item__title heading-h5 black">
+                                Доставка и установка «под ключ»
+                            </h3>
+                            <p class="advantage-item__subtitle body gray">
+                                Бережно доставим, подготовим основание, установим и благоустроим участок. Уберём за собой.
+                            </p>
+                        </div>
+                        <div class="advantage-item">
+                            <span class="advantage-item__icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/>
+                                    <path d="M9 12l2 2 4-4"/>
+                                </svg>
+                            </span>
+                            <h3 class="advantage-item__title heading-h5 black">
+                                Гарантия 10 лет
+                            </h3>
+                            <p class="advantage-item__subtitle body gray">
+                                Официальный договор и гарантия на камень, гравировку и монтаж. Если что-то случится — приедем и исправим.
+                            </p>
+                        </div>
+                        <div class="advantage-item">
+                            <span class="advantage-item__icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 20h4L19 9l-4-4L4 16v4z"/>
+                                    <path d="M13.5 6.5l4 4"/>
+                                </svg>
+                            </span>
+                            <h3 class="advantage-item__title heading-h5 black">
+                                Помощь в выборе и макете
+                            </h3>
+                            <p class="advantage-item__subtitle body gray">
+                                Художник бесплатно подготовит 3D-макет с надписью и портретом, чтобы вы увидели памятник заранее.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="advantage-item">
-                    <!--vector-->
-                    <h3 class="advantage-item__title">
-                        Индивидуальный подход
-                    </h3>
-                    <p class="advantage-item__subtitle">
-                        Выслушаем пожелания семьи, предложим варианты под любой бюджет и никогда не станем торопить с решением.
-                    </p>
+            </div>
+        </section>
+
+        <!--section catalog-->
+
+        <section class="catalog" id="catalog">
+            <div class="container">
+                <div class="catalog__wrap">
+                    <article class="section-article-row">
+                        <div class="article-row__item">
+                            <p class="article-row__subtitle subtitle green">
+                                Каталог
+                            </p>
+                            <h2 class="article-row__title heading-h2 black">
+                                Категория памятников
+                            </h2>
+                        </div>
+                        <div class="article-row__control">
+                            <a href="#" class="link-arrow link green">
+                                Весь каталог
+                            </a>
+                        </div>
+                    </article>
+                    <div class="category-list">
+                        <div class="category-item">
+                            <img src="" alt="" class="category-item__img">
+                            <article class="category-item__article">
+                                <h4 class="category-item__title heading-h5 black">
+                                    Одиночные памятники
+                                </h4>
+                                <p class="category-item__price subtitle gray">
+                                    от 18 000 ₽
+                                </p>
+                                <a href="#" class="link link-arrow category-item__link green">
+                                    Перейти в раздел
+                                </a>
+                            </article>
+                        </div>
+                        <div class="category-item">
+                            <img src="" alt="" class="category-item__img">
+                            <article class="category-item__article">
+                                <h4 class="category-item__title heading-h5 black">
+                                    Одиночные памятники
+                                </h4>
+                                <p class="category-item__price subtitle gray">
+                                    от 18 000 ₽
+                                </p>
+                                <a href="#" class="link link-arrow category-item__link green">
+                                    Перейти в раздел
+                                </a>
+                            </article>
+                        </div>
+                        <div class="category-item">
+                            <img src="" alt="" class="category-item__img">
+                            <article class="category-item__article">
+                                <h4 class="category-item__title heading-h5 black">
+                                    Одиночные памятники
+                                </h4>
+                                <p class="category-item__price subtitle gray">
+                                    от 18 000 ₽
+                                </p>
+                                <a href="#" class="link link-arrow category-item__link green">
+                                    Перейти в раздел
+                                </a>
+                            </article>
+                        </div>
+                        <div class="category-item">
+                            <img src="" alt="" class="category-item__img">
+                            <article class="category-item__article">
+                                <h4 class="category-item__title heading-h5 black">
+                                    Одиночные памятники
+                                </h4>
+                                <p class="category-item__price subtitle gray">
+                                    от 18 000 ₽
+                                </p>
+                                <a href="#" class="link link-arrow category-item__link green">
+                                    Перейти в раздел
+                                </a>
+                            </article>
+                        </div>
+                        <div class="category-item">
+                            <img src="" alt="" class="category-item__img">
+                            <article class="category-item__article">
+                                <h4 class="category-item__title heading-h5 black">
+                                    Одиночные памятники
+                                </h4>
+                                <p class="category-item__price subtitle gray">
+                                    от 18 000 ₽
+                                </p>
+                                <a href="#" class="link link-arrow category-item__link green">
+                                    Перейти в раздел
+                                </a>
+                            </article>
+                        </div>
+                        <div class="category-item">
+                            <img src="" alt="" class="category-item__img">
+                            <article class="category-item__article">
+                                <h4 class="category-item__title heading-h5 black">
+                                    Одиночные памятники
+                                </h4>
+                                <p class="category-item__price subtitle gray">
+                                    от 18 000 ₽
+                                </p>
+                                <a href="#" class="link link-arrow category-item__link green">
+                                    Перейти в раздел
+                                </a>
+                            </article>
+                        </div>
+                        <div class="category-item">
+                            <img src="" alt="" class="category-item__img">
+                            <article class="category-item__article">
+                                <h4 class="category-item__title heading-h5 black">
+                                    Одиночные памятники
+                                </h4>
+                                <p class="category-item__price subtitle gray">
+                                    от 18 000 ₽
+                                </p>
+                                <a href="#" class="link link-arrow category-item__link green">
+                                    Перейти в раздел
+                                </a>
+                            </article>
+                        </div>
+                        <div class="category-item">
+                            <img src="" alt="" class="category-item__img">
+                            <article class="category-item__article">
+                                <h4 class="category-item__title heading-h5 black">
+                                    Одиночные памятники
+                                </h4>
+                                <p class="category-item__price subtitle gray">
+                                    от 18 000 ₽
+                                </p>
+                                <a href="#" class="link link-arrow category-item__link green">
+                                    Перейти в раздел
+                                </a>
+                            </article>
+                        </div>
+                    </div>
                 </div>
-                <div class="advantage-item">
-                    <!--vector-->
-                    <h3 class="advantage-item__title">
-                        Любые материалы
-                    </h3>
-                    <p class="advantage-item__subtitle">
-                        Габбро-диабаз, карельский и красный гранит, белый мрамор, комбинированные решения — более 20 видов камня.
-                    </p>
+            </div>
+        </section>
+
+        <!--section popular-->
+
+        <section class="popular" id="popular">
+            <div class="container">
+                <div class="popular__wrap">
+                    <article class="section-article-row">
+                        <div class="article-row__item">
+                            <p class="article-row__subtitle subtitle green">
+                                Популярное
+                            </p>
+                            <h2 class="article-row__title heading-h2 black">
+                                Чаще всего выбирают
+                            </h2>
+                            <p class="article-row__text body gray">
+                                Выберите модель — специалист подберёт материал, размер и надпись и пришлёт точный расчёт.
+                            </p>
+                        </div>
+                        <div class="article-row__control slider-nav">
+                            <button class="slider-nav__btn" type="button" data-slider-prev="products" aria-label="Предыдущие">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 12H5M11 6l-6 6 6 6"/>
+                                </svg>
+                            </button>
+                            <button class="slider-nav__btn" type="button" data-slider-next="products" aria-label="Следующие">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14M13 6l6 6-6 6"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </article>
+                    <div class="slider" data-slider="products">
+                        <div class="slider__track product-list">
+                            <article class="product-item">
+                                <div class="product-item__media">
+                                    <span class="product-item__badge product-item__badge--hit caption-small white">Хит</span>
+                                    <img src="" alt="" class="product-item__img">
+                                </div>
+                                <div class="product-item__body">
+                                    <h3 class="product-item__title heading-h5 black">
+                                        Вертикальный памятник «Классика»
+                                    </h3>
+                                    <p class="product-item__meta caption gray">
+                                        Карельский гранит · 80×40 см
+                                    </p>
+                                    <p class="product-item__price subtitle black">
+                                        от 18 900 ₽
+                                    </p>
+                                    <div class="product-item__actions">
+                                        <a href="#" class="btn button button-secondary button-small">Подробнее</a>
+                                        <button class="btn button button-primary button-small" type="button" data-request="Заказать памятник" data-request-text="Вертикальный памятник «Классика», карельский гранит, 80×40 см">Заказать</button>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="product-item">
+                                <div class="product-item__media">
+                                    <span class="product-item__badge product-item__badge--hit caption-small white">Хит</span>
+                                    <img src="" alt="" class="product-item__img">
+                                </div>
+                                <div class="product-item__body">
+                                    <h3 class="product-item__title heading-h5 black">
+                                        Памятник-арка «Тишина»
+                                    </h3>
+                                    <p class="product-item__meta caption gray">
+                                        Габбро-диабаз · 80×40 см
+                                    </p>
+                                    <p class="product-item__price subtitle black">
+                                        от 24 500 ₽
+                                    </p>
+                                    <div class="product-item__actions">
+                                        <a href="#" class="btn button button-secondary button-small">Подробнее</a>
+                                        <button class="btn button button-primary button-small" type="button" data-request="Заказать памятник" data-request-text="Памятник-арка «Тишина», габбро-диабаз, 80×40 см">Заказать</button>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="product-item">
+                                <div class="product-item__media">
+                                    <img src="" alt="" class="product-item__img">
+                                </div>
+                                <div class="product-item__body">
+                                    <h3 class="product-item__title heading-h5 black">
+                                        Двойной памятник «Вместе»
+                                    </h3>
+                                    <p class="product-item__meta caption gray">
+                                        Габбро-диабаз · 100×80 см
+                                    </p>
+                                    <p class="product-item__price subtitle black">
+                                        от 38 900 ₽
+                                    </p>
+                                    <div class="product-item__actions">
+                                        <a href="#" class="btn button button-secondary button-small">Подробнее</a>
+                                        <button class="btn button button-primary button-small" type="button" data-request="Заказать памятник" data-request-text="Двойной памятник «Вместе», габбро-диабаз, 100×80 см">Заказать</button>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="product-item">
+                                <div class="product-item__media">
+                                    <span class="product-item__badge product-item__badge--new caption-small black">Новинка</span>
+                                    <img src="" alt="" class="product-item__img">
+                                </div>
+                                <div class="product-item__body">
+                                    <h3 class="product-item__title heading-h5 black">
+                                        Памятник «Светлая память»
+                                    </h3>
+                                    <p class="product-item__meta caption gray">
+                                        Белый мрамор · 80×40 см
+                                    </p>
+                                    <p class="product-item__price subtitle black">
+                                        от 29 900 ₽
+                                    </p>
+                                    <div class="product-item__actions">
+                                        <a href="#" class="btn button button-secondary button-small">Подробнее</a>
+                                        <button class="btn button button-primary button-small" type="button" data-request="Заказать памятник" data-request-text="Памятник «Светлая память», белый мрамор, 80×40 см">Заказать</button>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="product-item">
+                                <div class="product-item__media">
+                                    <img src="" alt="" class="product-item__img">
+                                </div>
+                                <div class="product-item__body">
+                                    <h3 class="product-item__title heading-h5 black">
+                                        Семейный комплекс «Родные»
+                                    </h3>
+                                    <p class="product-item__meta caption gray">
+                                        Карельский гранит · 180×120 см
+                                    </p>
+                                    <p class="product-item__price subtitle black">
+                                        от 74 000 ₽
+                                    </p>
+                                    <div class="product-item__actions">
+                                        <a href="#" class="btn button button-secondary button-small">Подробнее</a>
+                                        <button class="btn button button-primary button-small" type="button" data-request="Заказать памятник" data-request-text="Семейный комплекс «Родные», карельский гранит, 180×120 см">Заказать</button>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="product-item">
+                                <div class="product-item__media">
+                                    <span class="product-item__badge product-item__badge--new caption-small black">Новинка</span>
+                                    <img src="" alt="" class="product-item__img">
+                                </div>
+                                <div class="product-item__body">
+                                    <h3 class="product-item__title heading-h5 black">
+                                        Детский памятник «Ангел»
+                                    </h3>
+                                    <p class="product-item__meta caption gray">
+                                        Белый мрамор · 60×40 см
+                                    </p>
+                                    <p class="product-item__price subtitle black">
+                                        от 16 900 ₽
+                                    </p>
+                                    <div class="product-item__actions">
+                                        <a href="#" class="btn button button-secondary button-small">Подробнее</a>
+                                        <button class="btn button button-primary button-small" type="button" data-request="Заказать памятник" data-request-text="Детский памятник «Ангел», белый мрамор, 60×40 см">Заказать</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
                 </div>
-                <div class="advantage-item">
-                    <!--vector-->
-                    <h3 class="advantage-item__title">
-                        Доставка и установка «под ключ»
-                    </h3>
-                    <p class="advantage-item__subtitle">
-                        Бережно доставим, подготовим основание, установим и благоустроим участок. Уберём за собой.
-                    </p>
+            </div>
+        </section>
+
+        <!--section calculator-->
+
+        <section class="calculator" id="calculator">
+            <div class="container">
+                <div class="calculator__wrap">
+                    <article class="section-article">
+                        <p class="section-article__subtitle subtitle green">
+                            Калькулятор
+                        </p>
+                        <h2 class="section-article__title heading-h2 black">
+                            Рассчитайте ориентировочную стоимость
+                        </h2>
+                        <p class="section-article__text body gray">
+                            Пять простых шагов — и вы увидите примерную цену. Точный расчёт подготовит специалист бесплатно.
+                        </p>
+                    </article>
+                    <div class="calc" id="calc">
+                        <div class="calc-main">
+                            <ol class="calc-progress" aria-label="Шаги расчёта">
+                                <li class="calc-progress__item caption gray is-active" data-progress="1"><span class="calc-progress__label">Тип</span></li>
+                                <li class="calc-progress__item caption gray" data-progress="2"><span class="calc-progress__label">Материал</span></li>
+                                <li class="calc-progress__item caption gray" data-progress="3"><span class="calc-progress__label">Размер</span></li>
+                                <li class="calc-progress__item caption gray" data-progress="4"><span class="calc-progress__label">Гравировка</span></li>
+                                <li class="calc-progress__item caption gray" data-progress="5"><span class="calc-progress__label">Дополнительно</span></li>
+                            </ol>
+                            <form class="calc-form" id="calcForm" novalidate>
+                                <fieldset class="calc-step is-active" data-step="1">
+                                    <legend class="calc-step__legend heading-h4 black">
+                                        Какой памятник вы планируете?
+                                    </legend>
+                                    <div class="option-list">
+                                        <label class="option">
+                                            <input type="radio" name="type" value="Одиночный" data-price="18900" class="option__input" checked>
+                                            <span class="option__body">
+                                                <span class="option__title subtitle black">Одиночный</span>
+                                                <span class="option__desc caption gray">Вертикальная стела на одного человека</span>
+                                                <span class="option__price caption green">от 18 900 ₽</span>
+                                            </span>
+                                        </label>
+                                        <label class="option">
+                                            <input type="radio" name="type" value="Двойной" data-price="32900" class="option__input">
+                                            <span class="option__body">
+                                                <span class="option__title subtitle black">Двойной</span>
+                                                <span class="option__desc caption gray">Широкая стела для супругов или родных</span>
+                                                <span class="option__price caption green">от 32 900 ₽</span>
+                                            </span>
+                                        </label>
+                                        <label class="option">
+                                            <input type="radio" name="type" value="Семейный комплекс" data-price="68000" class="option__input">
+                                            <span class="option__body">
+                                                <span class="option__title subtitle black">Семейный комплекс</span>
+                                                <span class="option__desc caption gray">Несколько стел с общим основанием</span>
+                                                <span class="option__price caption green">от 68 000 ₽</span>
+                                            </span>
+                                        </label>
+                                        <label class="option">
+                                            <input type="radio" name="type" value="Детский" data-price="14900" class="option__input">
+                                            <span class="option__body">
+                                                <span class="option__title subtitle black">Детский</span>
+                                                <span class="option__desc caption gray">Небольшие мягкие формы, светлый камень</span>
+                                                <span class="option__price caption green">от 14 900 ₽</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="calc-step" data-step="2">
+                                    <legend class="calc-step__legend heading-h4 black">
+                                        Выберите материал
+                                    </legend>
+                                    <div class="option-list option-list--three">
+                                        <label class="option">
+                                            <input type="radio" name="material" value="Гранит" data-mult="1" class="option__input" checked>
+                                            <span class="option__body">
+                                                <span class="option__swatch option__swatch--granite"></span>
+                                                <span class="option__title subtitle black">Гранит</span>
+                                                <span class="option__desc caption gray">Самый прочный, служит веками</span>
+                                                <span class="option__price caption green">базовая цена</span>
+                                            </span>
+                                        </label>
+                                        <label class="option">
+                                            <input type="radio" name="material" value="Мрамор" data-mult="1.2" class="option__input">
+                                            <span class="option__body">
+                                                <span class="option__swatch option__swatch--marble"></span>
+                                                <span class="option__title subtitle black">Мрамор</span>
+                                                <span class="option__desc caption gray">Светлый, благородный, тёплый оттенок</span>
+                                                <span class="option__price caption green">+20%</span>
+                                            </span>
+                                        </label>
+                                        <label class="option">
+                                            <input type="radio" name="material" value="Комбинированный" data-mult="1.35" class="option__input">
+                                            <span class="option__body">
+                                                <span class="option__swatch option__swatch--combo"></span>
+                                                <span class="option__title subtitle black">Комбинированный</span>
+                                                <span class="option__desc caption gray">Сочетание гранита и мрамора</span>
+                                                <span class="option__price caption green">+35%</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="calc-step" data-step="3">
+                                    <legend class="calc-step__legend heading-h4 black">
+                                        Размер и форма
+                                    </legend>
+                                    <p class="calc-step__label caption gray">
+                                        Размер стелы
+                                    </p>
+                                    <div class="option-list option-list--three">
+                                        <label class="option">
+                                            <input type="radio" name="size" value="80×40 см" data-mult="1" class="option__input" checked>
+                                            <span class="option__body">
+                                                <span class="option__title subtitle black">80×40 см</span>
+                                                <span class="option__desc caption gray">Компактный</span>
+                                            </span>
+                                        </label>
+                                        <label class="option">
+                                            <input type="radio" name="size" value="100×50 см" data-mult="1.25" class="option__input">
+                                            <span class="option__body">
+                                                <span class="option__title subtitle black">100×50 см</span>
+                                                <span class="option__desc caption gray">Самый популярный</span>
+                                            </span>
+                                        </label>
+                                        <label class="option">
+                                            <input type="radio" name="size" value="120×60 см" data-mult="1.55" class="option__input">
+                                            <span class="option__body">
+                                                <span class="option__title subtitle black">120×60 см</span>
+                                                <span class="option__desc caption gray">Крупный</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <p class="calc-step__label caption gray">
+                                        Форма
+                                    </p>
+                                    <div class="option-list option-list--three">
+                                        <label class="option">
+                                            <input type="radio" name="shape" value="Прямая" data-price="0" class="option__input" checked>
+                                            <span class="option__body">
+                                                <span class="option__title subtitle black">Прямая</span>
+                                                <span class="option__desc caption gray">Строгая классика</span>
+                                            </span>
+                                        </label>
+                                        <label class="option">
+                                            <input type="radio" name="shape" value="Арка" data-price="2500" class="option__input">
+                                            <span class="option__body">
+                                                <span class="option__title subtitle black">Арка</span>
+                                                <span class="option__desc caption gray">Мягкий скруглённый верх</span>
+                                                <span class="option__price caption green">+2 500 ₽</span>
+                                            </span>
+                                        </label>
+                                        <label class="option">
+                                            <input type="radio" name="shape" value="Фигурная" data-price="6500" class="option__input">
+                                            <span class="option__body">
+                                                <span class="option__title subtitle black">Фигурная</span>
+                                                <span class="option__desc caption gray">Волна, асимметрия, резьба</span>
+                                                <span class="option__price caption green">+6 500 ₽</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="calc-step" data-step="4">
+                                    <legend class="calc-step__legend heading-h4 black">
+                                        Гравировка и декор
+                                    </legend>
+                                    <div class="option-list option-list--three">
+                                        <label class="option">
+                                            <input type="radio" name="engraving" value="Текст" data-price="3500" class="option__input" checked>
+                                            <span class="option__body">
+                                                <span class="option__title subtitle black">Текст</span>
+                                                <span class="option__desc caption gray">ФИО, даты, эпитафия</span>
+                                                <span class="option__price caption green">+3 500 ₽</span>
+                                            </span>
+                                        </label>
+                                        <label class="option">
+                                            <input type="radio" name="engraving" value="Текст и портрет" data-price="12000" class="option__input">
+                                            <span class="option__body">
+                                                <span class="option__title subtitle black">Текст и портрет</span>
+                                                <span class="option__desc caption gray">Ручная гравировка портрета</span>
+                                                <span class="option__price caption green">+12 000 ₽</span>
+                                            </span>
+                                        </label>
+                                        <label class="option">
+                                            <input type="radio" name="engraving" value="Художественная композиция" data-price="22000" class="option__input">
+                                            <span class="option__body">
+                                                <span class="option__title subtitle black">Композиция</span>
+                                                <span class="option__desc caption gray">Портрет, пейзаж, символы</span>
+                                                <span class="option__price caption green">+22 000 ₽</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <p class="calc-step__label caption gray">
+                                        Декор
+                                    </p>
+                                    <div class="checkbox-list">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="decor" value="Золочение букв" data-price="4000" class="checkbox__input">
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">Золочение букв сусальным золотом</span>
+                                            <span class="checkbox__price caption green">+4 000 ₽</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="decor" value="Символ или крест" data-price="2500" class="checkbox__input">
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">Символ, крест или цветы</span>
+                                            <span class="checkbox__price caption green">+2 500 ₽</span>
+                                        </label>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="calc-step" data-step="5">
+                                    <legend class="calc-step__legend heading-h4 black">
+                                        Дополнительные элементы
+                                    </legend>
+                                    <div class="checkbox-list">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="extra" value="Цветник" data-price="9500" class="checkbox__input">
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">Цветник из камня</span>
+                                            <span class="checkbox__price caption green">+9 500 ₽</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="extra" value="Укладка плитки" data-price="15000" class="checkbox__input">
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">Укладка плитки на участке</span>
+                                            <span class="checkbox__price caption green">+15 000 ₽</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="extra" value="Ограда" data-price="18000" class="checkbox__input">
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">Ограда</span>
+                                            <span class="checkbox__price caption green">+18 000 ₽</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="extra" value="Установка" data-price="8000" class="checkbox__input" checked>
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">Доставка и установка</span>
+                                            <span class="checkbox__price caption green">+8 000 ₽</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="extra" value="Демонтаж старого" data-price="5000" class="checkbox__input">
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">Демонтаж старого памятника</span>
+                                            <span class="checkbox__price caption green">+5 000 ₽</span>
+                                        </label>
+                                    </div>
+                                </fieldset>
+
+                                <div class="calc-step calc-result" data-step="6">
+                                    <p class="calc-result__subtitle subtitle green">
+                                        Ваш расчёт готов
+                                    </p>
+                                    <p class="calc-result__label body gray">
+                                        Ориентировочная стоимость
+                                    </p>
+                                    <p class="calc-result__price heading-h2 green" data-calc-range>
+                                        —
+                                    </p>
+                                    <p class="calc-result__note body gray">
+                                        Итоговая цена зависит от выбранного камня и состояния участка. Специалист уточнит детали и пришлёт точную смету — бесплатно и ни к чему не обязывая.
+                                    </p>
+                                    <div class="calc-result__form">
+                                        <div class="field">
+                                            <label for="calcName" class="field__label caption black">Как к вам обращаться</label>
+                                            <input id="calcName" name="name" type="text" class="field__input body" placeholder="Имя" autocomplete="name">
+                                        </div>
+                                        <div class="field">
+                                            <label for="calcPhone" class="field__label caption black">Телефон <span class="field__required caption-small gray">обязательно</span></label>
+                                            <input id="calcPhone" name="phone" type="tel" class="field__input body" placeholder="+7 (___) ___-__-__" autocomplete="tel" data-phone required>
+                                            <p class="field__error caption">
+                                                Пожалуйста, укажите номер, чтобы мы могли перезвонить
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="calc-nav">
+                                    <button type="button" class="btn button button-ghost calc-nav__prev" data-calc-prev hidden>Назад</button>
+                                    <button type="button" class="btn button button-primary calc-nav__next" data-calc-next>Далее</button>
+                                    <button type="submit" class="btn button button-primary calc-nav__submit" data-calc-submit hidden>Получить точный расчёт</button>
+                                </div>
+                            </form>
+                        </div>
+                        <aside class="calc-aside">
+                            <p class="calc-aside__title heading-h4 black">
+                                Ваш выбор
+                            </p>
+                            <ul class="calc-summary" data-calc-summary></ul>
+                            <div class="calc-total">
+                                <span class="calc-total__label caption gray">Ориентировочно</span>
+                                <strong class="calc-total__value heading-h3 black" data-calc-total>—</strong>
+                            </div>
+                            <p class="calc-hint caption gray">
+                                Цена фиксируется в договоре и не меняется в процессе работы
+                            </p>
+                        </aside>
+                    </div>
                 </div>
-                <div class="advantage-item">
-                    <!--vector-->
-                    <h3 class="advantage-item__title">
-                        Гарантия 10 лет
-                    </h3>
-                    <p class="advantage-item__subtitle">
-                        Официальный договор и гарантия на камень, гравировку и монтаж. Если что-то случится — приедем и исправим.
-                    </p>
-                </div>
-                <div class="advantage-item">
-                    <!--vector-->
-                    <h3 class="advantage-item__title">
-                        Помощь в выборе и макете
-                    </h3>
-                    <p class="advantage-item__subtitle">
-                        Художник бесплатно подготовит 3D-макет с надписью и портретом, чтобы вы увидели памятник заранее.
+            </div>
+        </section>
+
+        <!--section portfolio-->
+
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="portfolio__wrap">
+                    <article class="section-article">
+                        <p class="section-article__subtitle subtitle green">
+                            Портфолио
+                        </p>
+                        <h2 class="section-article__title heading-h2 black">
+                            Реальные работы наших клиентов
+                        </h2>
+                        <p class="section-article__text body gray">
+                            Каждая работа публикуется с согласия семьи.
+                        </p>
+                    </article>
+                    <div class="filter-list" role="group" aria-label="Фильтры портфолио">
+                        <div class="filter-group">
+                            <span class="filter-group__label caption gray">Материал</span>
+                            <div class="chip-list" data-filter="material">
+                                <button type="button" class="chip caption black is-active" data-value="all">Все</button>
+                                <button type="button" class="chip caption black" data-value="granite">Гранит</button>
+                                <button type="button" class="chip caption black" data-value="marble">Мрамор</button>
+                                <button type="button" class="chip caption black" data-value="combo">Комбинированный</button>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <span class="filter-group__label caption gray">Тип</span>
+                            <div class="chip-list" data-filter="type">
+                                <button type="button" class="chip caption black is-active" data-value="all">Все</button>
+                                <button type="button" class="chip caption black" data-value="single">Одиночный</button>
+                                <button type="button" class="chip caption black" data-value="double">Двойной</button>
+                                <button type="button" class="chip caption black" data-value="family">Семейный</button>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <span class="filter-group__label caption gray">Год</span>
+                            <div class="chip-list" data-filter="year">
+                                <button type="button" class="chip caption black is-active" data-value="all">Все</button>
+                                <button type="button" class="chip caption black" data-value="2026">2026</button>
+                                <button type="button" class="chip caption black" data-value="2025">2025</button>
+                                <button type="button" class="chip caption black" data-value="2024">2024</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-list" data-portfolio>
+                        <article class="work-item" data-material="granite" data-type="single" data-year="2026">
+                            <div class="work-item__media">
+                                <img src="" alt="" class="work-item__img">
+                                <span class="work-item__year caption black">2026</span>
+                            </div>
+                            <div class="work-item__body">
+                                <h3 class="work-item__title heading-h5 black">
+                                    Арка с портретом
+                                </h3>
+                                <dl class="work-item__meta">
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Материал</dt>
+                                        <dd class="caption black">Габбро-диабаз</dd>
+                                    </div>
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Размер</dt>
+                                        <dd class="caption black">100×50×8 см</dd>
+                                    </div>
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Особенности</dt>
+                                        <dd class="caption black">Ручной портрет, золочение</dd>
+                                    </div>
+                                </dl>
+                                <button type="button" class="btn button button-secondary button-small button-block" data-request="Хочу такой же памятник" data-request-text="Хочу такой же: Арка с портретом, габбро-диабаз, 100×50 см">Хочу такой же</button>
+                            </div>
+                        </article>
+                        <article class="work-item" data-material="marble" data-type="single" data-year="2026">
+                            <div class="work-item__media">
+                                <img src="" alt="" class="work-item__img">
+                                <span class="work-item__year caption black">2026</span>
+                            </div>
+                            <div class="work-item__body">
+                                <h3 class="work-item__title heading-h5 black">
+                                    Светлая стела с голубем
+                                </h3>
+                                <dl class="work-item__meta">
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Материал</dt>
+                                        <dd class="caption black">Белый мрамор</dd>
+                                    </div>
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Размер</dt>
+                                        <dd class="caption black">80×40×6 см</dd>
+                                    </div>
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Особенности</dt>
+                                        <dd class="caption black">Барельеф, цветник</dd>
+                                    </div>
+                                </dl>
+                                <button type="button" class="btn button button-secondary button-small button-block" data-request="Хочу такой же памятник" data-request-text="Хочу такой же: Светлая стела с голубем, белый мрамор, 80×40 см">Хочу такой же</button>
+                            </div>
+                        </article>
+                        <article class="work-item" data-material="granite" data-type="double" data-year="2025">
+                            <div class="work-item__media">
+                                <img src="" alt="" class="work-item__img">
+                                <span class="work-item__year caption black">2025</span>
+                            </div>
+                            <div class="work-item__body">
+                                <h3 class="work-item__title heading-h5 black">
+                                    Двойной для супругов
+                                </h3>
+                                <dl class="work-item__meta">
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Материал</dt>
+                                        <dd class="caption black">Карельский гранит</dd>
+                                    </div>
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Размер</dt>
+                                        <dd class="caption black">120×100×8 см</dd>
+                                    </div>
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Особенности</dt>
+                                        <dd class="caption black">Два портрета, эпитафия</dd>
+                                    </div>
+                                </dl>
+                                <button type="button" class="btn button button-secondary button-small button-block" data-request="Хочу такой же памятник" data-request-text="Хочу такой же: Двойной для супругов, карельский гранит, 120×100 см">Хочу такой же</button>
+                            </div>
+                        </article>
+                        <article class="work-item" data-material="combo" data-type="single" data-year="2025">
+                            <div class="work-item__media">
+                                <img src="" alt="" class="work-item__img">
+                                <span class="work-item__year caption black">2025</span>
+                            </div>
+                            <div class="work-item__body">
+                                <h3 class="work-item__title heading-h5 black">
+                                    Волна на гранитном цоколе
+                                </h3>
+                                <dl class="work-item__meta">
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Материал</dt>
+                                        <dd class="caption black">Мрамор + габбро</dd>
+                                    </div>
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Размер</dt>
+                                        <dd class="caption black">110×55×8 см</dd>
+                                    </div>
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Особенности</dt>
+                                        <dd class="caption black">Фигурная резка</dd>
+                                    </div>
+                                </dl>
+                                <button type="button" class="btn button button-secondary button-small button-block" data-request="Хочу такой же памятник" data-request-text="Хочу такой же: Волна на гранитном цоколе, мрамор и габбро, 110×55 см">Хочу такой же</button>
+                            </div>
+                        </article>
+                        <article class="work-item" data-material="granite" data-type="family" data-year="2024">
+                            <div class="work-item__media">
+                                <img src="" alt="" class="work-item__img">
+                                <span class="work-item__year caption black">2024</span>
+                            </div>
+                            <div class="work-item__body">
+                                <h3 class="work-item__title heading-h5 black">
+                                    Семейный мемориал
+                                </h3>
+                                <dl class="work-item__meta">
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Материал</dt>
+                                        <dd class="caption black">Габбро-диабаз</dd>
+                                    </div>
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Размер</dt>
+                                        <dd class="caption black">200×180 см</dd>
+                                    </div>
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Особенности</dt>
+                                        <dd class="caption black">Три стелы, плитка, скамья</dd>
+                                    </div>
+                                </dl>
+                                <button type="button" class="btn button button-secondary button-small button-block" data-request="Хочу такой же памятник" data-request-text="Хочу такой же: Семейный мемориал, габбро-диабаз, 200×180 см">Хочу такой же</button>
+                            </div>
+                        </article>
+                        <article class="work-item" data-material="granite" data-type="single" data-year="2024">
+                            <div class="work-item__media">
+                                <img src="" alt="" class="work-item__img">
+                                <span class="work-item__year caption black">2024</span>
+                            </div>
+                            <div class="work-item__body">
+                                <h3 class="work-item__title heading-h5 black">
+                                    Тёплый красный гранит
+                                </h3>
+                                <dl class="work-item__meta">
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Материал</dt>
+                                        <dd class="caption black">Красный гранит</dd>
+                                    </div>
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Размер</dt>
+                                        <dd class="caption black">100×50×8 см</dd>
+                                    </div>
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Особенности</dt>
+                                        <dd class="caption black">Полировка, гравировка храма</dd>
+                                    </div>
+                                </dl>
+                                <button type="button" class="btn button button-secondary button-small button-block" data-request="Хочу такой же памятник" data-request-text="Хочу такой же: Памятник из красного гранита, 100×50 см">Хочу такой же</button>
+                            </div>
+                        </article>
+                        <article class="work-item" data-material="marble" data-type="double" data-year="2025">
+                            <div class="work-item__media">
+                                <img src="" alt="" class="work-item__img">
+                                <span class="work-item__year caption black">2025</span>
+                            </div>
+                            <div class="work-item__body">
+                                <h3 class="work-item__title heading-h5 black">
+                                    Двойной из мрамора
+                                </h3>
+                                <dl class="work-item__meta">
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Материал</dt>
+                                        <dd class="caption black">Белый мрамор</dd>
+                                    </div>
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Размер</dt>
+                                        <dd class="caption black">120×90×8 см</dd>
+                                    </div>
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Особенности</dt>
+                                        <dd class="caption black">Резные розы</dd>
+                                    </div>
+                                </dl>
+                                <button type="button" class="btn button button-secondary button-small button-block" data-request="Хочу такой же памятник" data-request-text="Хочу такой же: Двойной из белого мрамора, 120×90 см">Хочу такой же</button>
+                            </div>
+                        </article>
+                        <article class="work-item" data-material="combo" data-type="family" data-year="2026">
+                            <div class="work-item__media">
+                                <img src="" alt="" class="work-item__img">
+                                <span class="work-item__year caption black">2026</span>
+                            </div>
+                            <div class="work-item__body">
+                                <h3 class="work-item__title heading-h5 black">
+                                    Комплекс с мраморными стелами
+                                </h3>
+                                <dl class="work-item__meta">
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Материал</dt>
+                                        <dd class="caption black">Мрамор + гранит</dd>
+                                    </div>
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Размер</dt>
+                                        <dd class="caption black">180×150 см</dd>
+                                    </div>
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Особенности</dt>
+                                        <dd class="caption black">Гранитная ограда</dd>
+                                    </div>
+                                </dl>
+                                <button type="button" class="btn button button-secondary button-small button-block" data-request="Хочу такой же памятник" data-request-text="Хочу такой же: Комплекс с мраморными стелами, 180×150 см">Хочу такой же</button>
+                            </div>
+                        </article>
+                        <article class="work-item" data-material="granite" data-type="single" data-year="2025">
+                            <div class="work-item__media">
+                                <img src="" alt="" class="work-item__img">
+                                <span class="work-item__year caption black">2025</span>
+                            </div>
+                            <div class="work-item__body">
+                                <h3 class="work-item__title heading-h5 black">
+                                    Строгая классика
+                                </h3>
+                                <dl class="work-item__meta">
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Материал</dt>
+                                        <dd class="caption black">Карельский гранит</dd>
+                                    </div>
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Размер</dt>
+                                        <dd class="caption black">100×50×5 см</dd>
+                                    </div>
+                                    <div class="work-item__meta-row">
+                                        <dt class="caption gray">Особенности</dt>
+                                        <dd class="caption black">Лаконичная надпись</dd>
+                                    </div>
+                                </dl>
+                                <button type="button" class="btn button button-secondary button-small button-block" data-request="Хочу такой же памятник" data-request-text="Хочу такой же: Строгая классика, карельский гранит, 100×50 см">Хочу такой же</button>
+                            </div>
+                        </article>
+                    </div>
+                    <p class="portfolio-empty body gray" data-portfolio-empty hidden>
+                        По выбранным параметрам работ пока нет. Попробуйте изменить фильтры — или расскажите нам о своей идее.
                     </p>
                 </div>
             </div>
         </section>
-        <section class="catalog">
-            <article class="section-article-row">
-                <div class="article-row__item">
-                    <p class="article-row__subtitle">
-                        Каталог
-                    </p>
-                    <h2 class="article-row__title">
-                        Категория памятников
-                    </h2>
-                </div>
-                <div class="article-row__control">
-                    <a href="#" class="link-arrow link">
-                        Весь каталог
-                    </a>
-                </div>
-            </article>
-            <div class="category-list">
-                <div class="category-item">
-                    <img src="" alt="" class="category-item__img">
-                    <article class="category-item__article">
-                        <h4 class="category-item__title">
-                            Одиночные памятники
-                        </h4>
-                        <p class="category-item__price">
-                            от 18 000 ₽
-                        </p>
-                        <a href="#" class="link link-arrow category-item__link">
-                            Перейти в раздел
-                        </a>
+
+        <!--section reviews-->
+
+        <section class="reviews" id="reviews">
+            <div class="container">
+                <div class="reviews__wrap">
+                    <article class="section-article-row">
+                        <div class="article-row__item">
+                            <p class="article-row__subtitle subtitle green">
+                                Отзывы
+                            </p>
+                            <h2 class="article-row__title heading-h2 black">
+                                Что говорят семьи
+                            </h2>
+                            <p class="article-row__rating body gray">
+                                <span class="stars" aria-hidden="true"></span>
+                                <strong class="article-row__rating-value subtitle black">4,9</strong>
+                                — средняя оценка по 312 отзывам на Яндекс Картах и 2ГИС
+                            </p>
+                        </div>
+                        <div class="article-row__control slider-nav">
+                            <button class="slider-nav__btn" type="button" data-slider-prev="reviews" aria-label="Предыдущие отзывы">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 12H5M11 6l-6 6 6 6"/>
+                                </svg>
+                            </button>
+                            <button class="slider-nav__btn" type="button" data-slider-next="reviews" aria-label="Следующие отзывы">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14M13 6l6 6-6 6"/>
+                                </svg>
+                            </button>
+                        </div>
                     </article>
+                    <div class="slider" data-slider="reviews">
+                        <div class="slider__track review-list">
+                            <article class="review-item">
+                                <header class="review-item__head">
+                                    <span class="review-item__avatar subtitle black">ЕС</span>
+                                    <div class="review-item__author">
+                                        <p class="review-item__name subtitle black">
+                                            Елена Смирнова
+                                        </p>
+                                        <p class="review-item__date caption gray">
+                                            12 августа 2026
+                                        </p>
+                                    </div>
+                                    <span class="stars stars--small" aria-label="Оценка 5 из 5"></span>
+                                </header>
+                                <p class="review-item__text body black">
+                                    Заказывали памятник маме. Менеджер Ольга очень деликатно всё объяснила, не торопила. Макет переделывали дважды — без доплат. Установили точно в срок, участок оставили чистым.
+                                </p>
+                                <img src="" alt="" class="review-item__img">
+                            </article>
+                            <article class="review-item">
+                                <header class="review-item__head">
+                                    <span class="review-item__avatar review-item__avatar--green subtitle black">АК</span>
+                                    <div class="review-item__author">
+                                        <p class="review-item__name subtitle black">
+                                            Андрей Ковалёв
+                                        </p>
+                                        <p class="review-item__date caption gray">
+                                            28 июля 2026
+                                        </p>
+                                    </div>
+                                    <span class="stars stars--small" aria-label="Оценка 5 из 5"></span>
+                                </header>
+                                <p class="review-item__text body black">
+                                    Живу в другом городе, поэтому всё решали по видеосвязи. Прислали фото камня, согласовали макет, после установки отправили видео. Портрет получился очень похожим.
+                                </p>
+                                <img src="" alt="" class="review-item__img">
+                            </article>
+                            <article class="review-item">
+                                <header class="review-item__head">
+                                    <span class="review-item__avatar review-item__avatar--beige subtitle black">ТН</span>
+                                    <div class="review-item__author">
+                                        <p class="review-item__name subtitle black">
+                                            Татьяна Николаева
+                                        </p>
+                                        <p class="review-item__date caption gray">
+                                            3 июля 2026
+                                        </p>
+                                    </div>
+                                    <span class="stars stars--small" aria-label="Оценка 5 из 5"></span>
+                                </header>
+                                <p class="review-item__text body black">
+                                    Спасибо за человеческое отношение. Помогли выбрать мрамор, подсказали, как ухаживать. Через год приехали на гарантийный осмотр сами, без напоминаний.
+                                </p>
+                                <img src="" alt="" class="review-item__img">
+                            </article>
+                            <article class="review-item">
+                                <header class="review-item__head">
+                                    <span class="review-item__avatar subtitle black">ИП</span>
+                                    <div class="review-item__author">
+                                        <p class="review-item__name subtitle black">
+                                            Игорь Петров
+                                        </p>
+                                        <p class="review-item__date caption gray">
+                                            15 июня 2026
+                                        </p>
+                                    </div>
+                                    <span class="stars stars--small" aria-label="Оценка 5 из 5"></span>
+                                </header>
+                                <p class="review-item__text body black">
+                                    Делали семейный комплекс с оградой и плиткой. Смета не изменилась ни на рубль, хотя работ было много. Бригада аккуратная, вежливая. Рекомендую.
+                                </p>
+                                <img src="" alt="" class="review-item__img">
+                            </article>
+                            <article class="review-item">
+                                <header class="review-item__head">
+                                    <span class="review-item__avatar review-item__avatar--green subtitle black">МВ</span>
+                                    <div class="review-item__author">
+                                        <p class="review-item__name subtitle black">
+                                            Марина Волкова
+                                        </p>
+                                        <p class="review-item__date caption gray">
+                                            2 июня 2026
+                                        </p>
+                                    </div>
+                                    <span class="stars stars--small" aria-label="Оценка 5 из 5"></span>
+                                </header>
+                                <p class="review-item__text body black">
+                                    Обращались по рекомендации знакомых и не пожалели. Всё прозрачно: договор, этапы, фотоотчёт с производства. Памятник стоит уже три зимы — как новый.
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="reviews__control">
+                        <button type="button" class="btn button button-secondary" data-request="Оставить отзыв" data-request-label="Ваш отзыв">Оставить отзыв</button>
+                    </div>
                 </div>
-                <div class="category-item">
-                    <img src="" alt="" class="category-item__img">
-                    <article class="category-item__article">
-                        <h4 class="category-item__title">
-                            Одиночные памятники
-                        </h4>
-                        <p class="category-item__price">
-                            от 18 000 ₽
+            </div>
+        </section>
+
+        <!--section steps-->
+
+        <section class="steps" id="steps">
+            <div class="container">
+                <div class="steps__wrap">
+                    <article class="section-article">
+                        <p class="section-article__subtitle subtitle green">
+                            Услуги и этапы
                         </p>
-                        <a href="#" class="link link-arrow category-item__link">
-                            Перейти в раздел
-                        </a>
+                        <h2 class="section-article__title heading-h2 black">
+                            Как мы работаем
+                        </h2>
+                        <p class="section-article__text body gray">
+                            Шесть понятных шагов от первого звонка до установки. На каждом этапе вы знаете, что происходит.
+                        </p>
                     </article>
+                    <ol class="steps-list">
+                        <li class="steps-item">
+                            <span class="steps-item__icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 5h16v11H9.5L5 20V5z"/>
+                                    <path d="M8.5 9.5h7M8.5 12.5h4"/>
+                                </svg>
+                            </span>
+                            <span class="steps-item__num caption green">01</span>
+                            <h3 class="steps-item__title heading-h5 black">
+                                Консультация
+                            </h3>
+                            <p class="steps-item__text body gray">
+                                Бесплатно ответим на вопросы по телефону, в мессенджере или в шоуруме.
+                            </p>
+                        </li>
+                        <li class="steps-item">
+                            <span class="steps-item__icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3.5 16.5l13-13 4 4-13 13z"/>
+                                    <path d="M8 12l2 2M11 9l2 2M14 6l2 2"/>
+                                </svg>
+                            </span>
+                            <span class="steps-item__num caption green">02</span>
+                            <h3 class="steps-item__title heading-h5 black">
+                                Замер
+                            </h3>
+                            <p class="steps-item__text body gray">
+                                Специалист приедет на участок, сделает замеры и фото. Выезд бесплатный.
+                            </p>
+                        </li>
+                        <li class="steps-item">
+                            <span class="steps-item__icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6.5 4h11l3.5 5-9 11L3 9z"/>
+                                    <path d="M3 9h18M12 20L8.5 9 10 4M12 20l3.5-11L14 4"/>
+                                </svg>
+                            </span>
+                            <span class="steps-item__num caption green">03</span>
+                            <h3 class="steps-item__title heading-h5 black">
+                                Материал и макет
+                            </h3>
+                            <p class="steps-item__text body gray">
+                                Подберём камень и подготовим 3D-макет с надписью и портретом.
+                            </p>
+                        </li>
+                        <li class="steps-item">
+                            <span class="steps-item__icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M13 4.5l6.5 6.5-2.5 2.5-6.5-6.5z"/>
+                                    <path d="M11.5 9L3.5 17l3 3 8-8"/>
+                                </svg>
+                            </span>
+                            <span class="steps-item__num caption green">04</span>
+                            <h3 class="steps-item__title heading-h5 black">
+                                Изготовление
+                            </h3>
+                            <p class="steps-item__text body gray">
+                                От 14 дней на собственном производстве. Присылаем фото на каждом этапе.
+                            </p>
+                        </li>
+                        <li class="steps-item">
+                            <span class="steps-item__icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 6h11v10H3z"/>
+                                    <path d="M14 9.5h3.5L21 13v3h-7"/>
+                                    <circle cx="7" cy="17.5" r="1.8"/>
+                                    <circle cx="17" cy="17.5" r="1.8"/>
+                                </svg>
+                            </span>
+                            <span class="steps-item__num caption green">05</span>
+                            <h3 class="steps-item__title heading-h5 black">
+                                Доставка
+                            </h3>
+                            <p class="steps-item__text body gray">
+                                Бережно упакуем и привезём в согласованный день на своём транспорте.
+                            </p>
+                        </li>
+                        <li class="steps-item">
+                            <span class="steps-item__icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M8 20V8a4 4 0 0 1 8 0v12"/>
+                                    <path d="M5 20h14M10 11h4M10 14h4"/>
+                                </svg>
+                            </span>
+                            <span class="steps-item__num caption green">06</span>
+                            <h3 class="steps-item__title heading-h5 black">
+                                Установка
+                            </h3>
+                            <p class="steps-item__text body gray">
+                                Установим на прочное основание, благоустроим участок и уберём за собой.
+                            </p>
+                        </li>
+                        <li class="steps-item steps-item--warranty">
+                            <span class="steps-item__icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/>
+                                    <path d="M9 12l2 2 4-4"/>
+                                </svg>
+                            </span>
+                            <span class="steps-item__num caption green">07</span>
+                            <h3 class="steps-item__title heading-h5 black">
+                                Гарантия
+                            </h3>
+                            <ul class="steps-item__warranty">
+                                <li class="steps-item__warranty-item body gray">
+                                    <strong class="green">10 лет</strong> на памятник
+                                </li>
+                                <li class="steps-item__warranty-item body gray">
+                                    <strong class="green">5 лет</strong> на монтажные работы
+                                </li>
+                                <li class="steps-item__warranty-item body gray">
+                                    <strong class="green">3 года</strong> на кладку плитки
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
                 </div>
-                <div class="category-item">
-                    <img src="" alt="" class="category-item__img">
-                    <article class="category-item__article">
-                        <h4 class="category-item__title">
-                            Одиночные памятники
-                        </h4>
-                        <p class="category-item__price">
-                            от 18 000 ₽
-                        </p>
-                        <a href="#" class="link link-arrow category-item__link">
-                            Перейти в раздел
-                        </a>
+            </div>
+        </section>
+
+        <!--section articles-->
+
+        <section class="articles" id="articles">
+            <div class="container">
+                <div class="articles__wrap">
+                    <article class="section-article-row">
+                        <div class="article-row__item">
+                            <p class="article-row__subtitle subtitle green">
+                                Материалы
+                            </p>
+                            <h2 class="article-row__title heading-h2 black">
+                                Полезно знать
+                            </h2>
+                            <p class="article-row__text body gray">
+                                Спокойно и понятно рассказываем о камне, гравировке и уходе.
+                            </p>
+                        </div>
+                        <div class="article-row__control">
+                            <a href="#" class="link-arrow link green">
+                                Все статьи
+                            </a>
+                        </div>
                     </article>
+                    <div class="article-list">
+                        <article class="article-item">
+                            <a href="#" class="article-item__link">
+                                <img src="" alt="" class="article-item__img">
+                                <div class="article-item__body">
+                                    <p class="article-item__meta caption gray">
+                                        <span class="article-item__tag caption-small green">Материалы</span>
+                                        6 мин чтения
+                                    </p>
+                                    <h3 class="article-item__title heading-h5 black">
+                                        Гранит или мрамор: что выбрать
+                                    </h3>
+                                    <p class="article-item__text body gray">
+                                        Сравниваем прочность, внешний вид, стоимость и уход за каждым камнем.
+                                    </p>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="article-item">
+                            <a href="#" class="article-item__link">
+                                <img src="" alt="" class="article-item__img">
+                                <div class="article-item__body">
+                                    <p class="article-item__meta caption gray">
+                                        <span class="article-item__tag caption-small green">Технологии</span>
+                                        5 мин чтения
+                                    </p>
+                                    <h3 class="article-item__title heading-h5 black">
+                                        Виды обработки камня
+                                    </h3>
+                                    <p class="article-item__text body gray">
+                                        Полировка, шлифовка, термообработка и «скала»: чем отличаются и где уместны.
+                                    </p>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="article-item">
+                            <a href="#" class="article-item__link">
+                                <img src="" alt="" class="article-item__img">
+                                <div class="article-item__body">
+                                    <p class="article-item__meta caption gray">
+                                        <span class="article-item__tag caption-small green">Оформление</span>
+                                        7 мин чтения
+                                    </p>
+                                    <h3 class="article-item__title heading-h5 black">
+                                        Способы нанесения гравировки
+                                    </h3>
+                                    <p class="article-item__text body gray">
+                                        Ручная, лазерная и пескоструйная гравировка, золочение букв и портреты.
+                                    </p>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="article-item">
+                            <a href="#" class="article-item__link">
+                                <img src="" alt="" class="article-item__img">
+                                <div class="article-item__body">
+                                    <p class="article-item__meta caption gray">
+                                        <span class="article-item__tag caption-small green">Советы</span>
+                                        4 мин чтения
+                                    </p>
+                                    <h3 class="article-item__title heading-h5 black">
+                                        Уход за памятником
+                                    </h3>
+                                    <p class="article-item__text body gray">
+                                        Как бережно очищать камень в разные сезоны и чего лучше избегать.
+                                    </p>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
                 </div>
-                <div class="category-item">
-                    <img src="" alt="" class="category-item__img">
-                    <article class="category-item__article">
-                        <h4 class="category-item__title">
-                            Одиночные памятники
-                        </h4>
-                        <p class="category-item__price">
-                            от 18 000 ₽
-                        </p>
-                        <a href="#" class="link link-arrow category-item__link">
-                            Перейти в раздел
-                        </a>
-                    </article>
+            </div>
+        </section>
+
+        <!--section faq-->
+
+        <section class="faq" id="faq">
+            <div class="container">
+                <div class="faq__wrap">
+                    <div class="faq-intro">
+                        <article class="section-article section-article--left">
+                            <p class="section-article__subtitle subtitle green">
+                                Вопросы и ответы
+                            </p>
+                            <h2 class="section-article__title heading-h2 black">
+                                Часто спрашивают
+                            </h2>
+                            <p class="section-article__text body gray">
+                                Если не нашли ответ — позвоните или напишите нам. Мы ответим спокойно и подробно.
+                            </p>
+                        </article>
+                        <div class="faq-card">
+                            <span class="faq-card__icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 5h16v11H9.5L5 20V5z"/>
+                                    <path d="M8.5 9.5h7M8.5 12.5h4"/>
+                                </svg>
+                            </span>
+                            <div class="faq-card__content">
+                                <p class="faq-card__title subtitle black">
+                                    Остались вопросы?
+                                </p>
+                                <p class="faq-card__text caption gray">
+                                    Перезвоним в течение 15 минут в рабочее время.
+                                </p>
+                            </div>
+                            <button type="button" class="btn button button-primary button-small faq-card__btn" data-request="Задать вопрос" data-request-label="Ваш вопрос">Задать вопрос</button>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <details class="accordion-item" open>
+                            <summary class="accordion-item__summary subtitle black">
+                                Сколько стоит памятник?
+                                <span class="accordion-item__icon"></span>
+                            </summary>
+                            <div class="accordion-item__content body gray">
+                                <p class="accordion-item__text">
+                                    Одиночный гранитный памятник — от 18 900 ₽, двойной — от 32 900 ₽, семейный комплекс — от 68 000 ₽. Итог зависит от камня, размера, гравировки и благоустройства. Ориентировочную цену можно узнать в <a href="#calculator" class="accordion-item__link green">калькуляторе</a>, а точную смету специалист подготовит бесплатно.
+                                </p>
+                            </div>
+                        </details>
+                        <details class="accordion-item">
+                            <summary class="accordion-item__summary subtitle black">
+                                Какой материал лучше?
+                                <span class="accordion-item__icon"></span>
+                            </summary>
+                            <div class="accordion-item__content body gray">
+                                <p class="accordion-item__text">
+                                    Гранит — самый прочный и долговечный, не боится морозов и почти не требует ухода. Мрамор светлее и мягче по восприятию, но требует бережного ухода. Часто выбирают комбинированный вариант: мраморная стела на гранитном основании.
+                                </p>
+                            </div>
+                        </details>
+                        <details class="accordion-item">
+                            <summary class="accordion-item__summary subtitle black">
+                                Сколько времени занимает изготовление?
+                                <span class="accordion-item__icon"></span>
+                            </summary>
+                            <div class="accordion-item__content body gray">
+                                <p class="accordion-item__text">
+                                    Стандартный памятник — от 14 рабочих дней, с художественным портретом — от 21 дня, семейный комплекс — 30–45 дней. Установку рекомендуем проводить не ранее чем через год после захоронения, когда грунт осядет; мы можем изготовить памятник заранее и бесплатно хранить его на складе.
+                                </p>
+                            </div>
+                        </details>
+                        <details class="accordion-item">
+                            <summary class="accordion-item__summary subtitle black">
+                                Есть ли рассрочка?
+                                <span class="accordion-item__icon"></span>
+                            </summary>
+                            <div class="accordion-item__content body gray">
+                                <p class="accordion-item__text">
+                                    Да. Беспроцентная рассрочка до 12 месяцев без первоначального взноса через банк-партнёр. Также можно оплатить поэтапно: предоплата 30%, остаток — после установки.
+                                </p>
+                            </div>
+                        </details>
+                        <details class="accordion-item">
+                            <summary class="accordion-item__summary subtitle black">
+                                Работаете ли вы в других городах?
+                                <span class="accordion-item__icon"></span>
+                            </summary>
+                            <div class="accordion-item__content body gray">
+                                <p class="accordion-item__text">
+                                    Да, устанавливаем памятники по всей области и в соседних регионах. Для клиентов из других городов всё согласуем дистанционно, а после установки пришлём фото- и видеоотчёт.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
                 </div>
-                <div class="category-item">
-                    <img src="" alt="" class="category-item__img">
-                    <article class="category-item__article">
-                        <h4 class="category-item__title">
-                            Одиночные памятники
-                        </h4>
-                        <p class="category-item__price">
-                            от 18 000 ₽
+            </div>
+        </section>
+
+        <!--section contacts-->
+
+        <section class="contacts" id="contacts">
+            <div class="container">
+                <div class="contacts__wrap">
+                    <article class="section-article">
+                        <p class="section-article__subtitle subtitle green">
+                            Контакты
                         </p>
-                        <a href="#" class="link link-arrow category-item__link">
-                            Перейти в раздел
-                        </a>
-                    </article>
-                </div>
-                <div class="category-item">
-                    <img src="" alt="" class="category-item__img">
-                    <article class="category-item__article">
-                        <h4 class="category-item__title">
-                            Одиночные памятники
-                        </h4>
-                        <p class="category-item__price">
-                            от 18 000 ₽
+                        <h2 class="section-article__title heading-h2 black">
+                            Будем рады помочь
+                        </h2>
+                        <p class="section-article__text body gray">
+                            Оставьте заявку — мы перезвоним, ответим на вопросы и договоримся о бесплатном выезде специалиста.
                         </p>
-                        <a href="#" class="link link-arrow category-item__link">
-                            Перейти в раздел
-                        </a>
                     </article>
-                </div>
-                <div class="category-item">
-                    <img src="" alt="" class="category-item__img">
-                    <article class="category-item__article">
-                        <h4 class="category-item__title">
-                            Одиночные памятники
-                        </h4>
-                        <p class="category-item__price">
-                            от 18 000 ₽
-                        </p>
-                        <a href="#" class="link link-arrow category-item__link">
-                            Перейти в раздел
-                        </a>
-                    </article>
-                </div>
-                <div class="category-item">
-                    <img src="" alt="" class="category-item__img">
-                    <article class="category-item__article">
-                        <h4 class="category-item__title">
-                            Одиночные памятники
-                        </h4>
-                        <p class="category-item__price">
-                            от 18 000 ₽
-                        </p>
-                        <a href="#" class="link link-arrow category-item__link">
-                            Перейти в раздел
-                        </a>
-                    </article>
+                    <div class="contacts-grid">
+                        <form class="contacts-form" id="contactForm" novalidate data-form>
+                            <h3 class="contacts-form__title heading-h4 black">
+                                Обратная связь
+                            </h3>
+                            <div class="field">
+                                <label for="cName" class="field__label caption black">Имя</label>
+                                <input id="cName" name="name" type="text" class="field__input body" placeholder="Как к вам обращаться" autocomplete="name">
+                            </div>
+                            <div class="field">
+                                <label for="cPhone" class="field__label caption black">Телефон <span class="field__required caption-small gray">обязательно</span></label>
+                                <input id="cPhone" name="phone" type="tel" class="field__input body" placeholder="+7 (___) ___-__-__" autocomplete="tel" data-phone required>
+                                <p class="field__error caption">
+                                    Пожалуйста, укажите номер, чтобы мы могли перезвонить
+                                </p>
+                            </div>
+                            <div class="field">
+                                <label for="cComment" class="field__label caption black">Комментарий</label>
+                                <textarea id="cComment" name="comment" rows="4" class="field__input field__textarea body" placeholder="Например: хотим двойной памятник из гранита, удобно созвониться вечером"></textarea>
+                            </div>
+                            <label class="checkbox checkbox--consent">
+                                <input type="checkbox" name="consent" class="checkbox__input" checked required>
+                                <span class="checkbox__box"></span>
+                                <span class="checkbox__text caption gray">
+                                    Согласен(на) на <a href="#" class="checkbox__link green">обработку персональных данных</a> в соответствии с <a href="#" class="checkbox__link green">политикой конфиденциальности</a>
+                                </span>
+                            </label>
+                            <button type="submit" class="btn button button-primary button-block">Отправить заявку</button>
+                        </form>
+                        <div class="contacts-info">
+                            <h3 class="contacts-info__title heading-h4 black">
+                                Как с нами связаться
+                            </h3>
+                            <a class="contacts-info__phone" href="tel:+74951234567">
+                                <span class="heading-h5 black">+7 (495) 123-45-67</span>
+                            </a>
+                            <ul class="contact-list">
+                                <li class="contact-list__item">
+                                    <svg class="contact-list__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="5.5" width="18" height="13" rx="2"/>
+                                        <path d="M3.5 7l8.5 6 8.5-6"/>
+                                    </svg>
+                                    <a href="mailto:info@gravis.ru" class="contact-list__link link black">info@gravis.ru</a>
+                                </li>
+                                <li class="contact-list__item">
+                                    <svg class="contact-list__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/>
+                                        <circle cx="12" cy="9" r="2.5"/>
+                                    </svg>
+                                    <span class="contact-list__text link black">Планетная ул., 38, микрорайон Северный, Ростов-на-Дону</span>
+                                </li>
+                                <li class="contact-list__item">
+                                    <svg class="contact-list__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="9"/>
+                                        <path d="M12 7v5l3 2"/>
+                                    </svg>
+                                    <span class="contact-list__text link black">Пн–Пт: 9:00–20:00, Сб–Вс: 10:00–18:00</span>
+                                </li>
+                            </ul>
+                            <div class="contacts-info__social">
+                                <p class="contacts-info__label caption gray">
+                                    Мы в соц. сетях
+                                </p>
+                                <ul class="contacts-social">
+                                    <li class="contacts-social__item">
+                                        <a href="#" class="contacts-social__link">
+                                            <svg class="contacts-social__icon" 
+                                                 viewBox="0 0 248 248"
+                                                 xmlns="http://www.w3.org/2000/svg" 
+                                                 width="32" 
+                                                 height="32" 
+                                                 fill="none"
+                                            >
+                                                <path fill="#2AABEE" d="M0 0h248v248H0z"/>
+                                                <path fill="#fff" d="M129.362 93.057q-16.659 6.93-66.588 28.682-8.107 3.225-8.494 6.308c-.436 3.475 3.916 4.844 9.842 6.707l.12.038q1.155.361 2.377.756c5.83 1.895 13.672 4.113 17.749 4.201q5.547.12 12.382-4.574 46.65-31.491 48.162-31.833c.711-.162 1.696-.365 2.364.228.668.594.602 1.718.531 2.019-.431 1.838-17.512 17.718-26.351 25.936l-.074.068c-2.717 2.526-4.64 4.315-5.037 4.726-.894.93-1.807 1.81-2.684 2.655-5.415 5.221-9.477 9.136.226 15.53 4.649 3.064 8.373 5.6 12.085 8.128l.031.02c4.064 2.768 8.119 5.53 13.365 8.968 1.336.876 2.613 1.787 3.856 2.673 4.731 3.372 8.981 6.402 14.232 5.919 3.051-.281 6.202-3.149 7.803-11.706 3.782-20.221 11.218-64.035 12.936-82.09.15-1.582-.039-3.606-.191-4.495-.152-.888-.47-2.155-1.625-3.092-1.368-1.11-3.48-1.344-4.424-1.328-4.295.076-10.884 2.367-42.593 15.556"/>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="contacts-social__item">
+                                        <a href="#" class="contacts-social__link">
+                                            <svg class="contacts-social__icon"
+                                                 viewBox="0 0 32 32" 
+                                                 xmlns="http://www.w3.org/2000/svg" 
+                                                 width="32" 
+                                                 height="32" 
+                                                 fill="none"
+                                            >
+                                                <path fill="#07F" d="M0 0h32v32H0z"/>
+                                                <path fill="#fff" d="M16.8 21.615c-6.15 0-9.656-4.208-9.8-11.22h3.093c.099 5.142 2.364 7.318 4.163 7.767v-7.768h2.904v4.433c1.771-.19 3.641-2.212 4.27-4.442h2.896a8.57 8.57 0 0 1-3.938 5.602A8.87 8.87 0 0 1 25 21.615h-3.192c-.683-2.131-2.391-3.785-4.648-4.01v4.01h-.36"/>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button type="button" class="btn button button-primary button-block contacts-info__btn" data-request="Заказать консультацию">Заказать консультацию</button>
+                        </div>
+                        <div class="contacts-map">
+                            <iframe class="contacts-map__frame" title="Карта: Ростов-на-Дону, Планетная ул., 38" src="https://yandex.ru/map-widget/v1/?ll=39.7453%2C47.3031&z=15&pt=39.7453,47.3031,pm2gnm" loading="lazy" allowfullscreen></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="footer-top">
-            <div class="footer-top__info">
-                <a href="#" class="footer-logo">
-                    <img src="assets/icons/logo.webp" alt="" class="footer-logo__img">
-                </a>
-                <p class="footer-text">
-                    Изготавливаем памятники из гранита и мрамора с 2005 года. С уважением к памяти и заботой о каждой семье.
-                </p>
-                <ul class="footer-list">
-                    <li class="footer-item">
-                        <a href="#" class="footer-link">
-                            <svg class="footer-link__social-icon" 
-                                 viewBox="0 0 248 248"
-                                 xmlns="http://www.w3.org/2000/svg" 
-                                 width="32" 
-                                 height="32" 
-                                 fill="none"
-                            >
-                                <path fill="#2AABEE" d="M0 0h248v248H0z"/>
-                                <path fill="#fff" d="M129.362 93.057q-16.659 6.93-66.588 28.682-8.107 3.225-8.494 6.308c-.436 3.475 3.916 4.844 9.842 6.707l.12.038q1.155.361 2.377.756c5.83 1.895 13.672 4.113 17.749 4.201q5.547.12 12.382-4.574 46.65-31.491 48.162-31.833c.711-.162 1.696-.365 2.364.228.668.594.602 1.718.531 2.019-.431 1.838-17.512 17.718-26.351 25.936l-.074.068c-2.717 2.526-4.64 4.315-5.037 4.726-.894.93-1.807 1.81-2.684 2.655-5.415 5.221-9.477 9.136.226 15.53 4.649 3.064 8.373 5.6 12.085 8.128l.031.02c4.064 2.768 8.119 5.53 13.365 8.968 1.336.876 2.613 1.787 3.856 2.673 4.731 3.372 8.981 6.402 14.232 5.919 3.051-.281 6.202-3.149 7.803-11.706 3.782-20.221 11.218-64.035 12.936-82.09.15-1.582-.039-3.606-.191-4.495-.152-.888-.47-2.155-1.625-3.092-1.368-1.11-3.48-1.344-4.424-1.328-4.295.076-10.884 2.367-42.593 15.556"/>
-                            </svg>
+        <div class="container">
+            <div class="footer-wrap">
+                <div class="footer-top">
+                    <div class="footer-top__info">
+                        <a href="#" class="footer-logo">
+                            <img src="assets/icons/logo.webp" alt="" class="footer-logo__img">
                         </a>
-                    </li>
-                    <li class="footer-item">
-                        <a href="#" class="footer-link">
-                            <svg class="footer-link__social-icon"
-                                 viewBox="0 0 500 500" 
-                                 xmlns="http://www.w3.org/2000/svg" 
-                                 width="32" 
-                                 height="32" 
-                                 fill="none"
-                            >
-                                <path fill="url(#a)" d="M0 0h500v500H0z"/>
-                                <path fill="url(#b)" d="M0 0h500v500H0z"/>
-                                <path fill="#fff" fill-rule="evenodd" d="M253.223 398.85c-29.441 0-43.123-4.298-66.905-21.49-15.043 19.341-62.679 34.456-64.756 8.596 0-19.412-4.298-35.816-9.17-53.725C106.59 310.168 100 285.598 100 249.997 100 164.968 169.771 101 252.435 101c82.736 0 147.564 67.12 147.564 149.784.278 81.386-65.391 147.632-146.776 148.066m1.218-224.355c-40.258-2.077-71.633 25.788-78.582 69.484-5.73 36.175 4.442 80.229 13.109 82.522 4.155 1.002 14.613-7.45 21.132-13.969a74.5 74.5 0 0 0 36.39 12.966c41.713 2.006 77.356-29.75 80.157-71.418 1.63-41.756-30.487-77.123-72.206-79.513z" clip-rule="evenodd"/>
-                                    <defs>
-                                        <radialGradient id="b" cx="0" cy="0" r="1" gradientTransform="matrix(378.9086 473.90374 -195.26028 156.1199 -11.895 -219.593)" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#00F"/>
-                                            <stop offset="1" stop-opacity="0"/>
-                                        </radialGradient>
-                                        <linearGradient id="a" x1="58.923" x2="500" y1="380.268" y2="250" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#4CF"/>
-                                            <stop offset=".662" stop-color="#53E"/>
-                                            <stop offset="1" stop-color="#93D"/>
-                                        </linearGradient>
-                                    </defs>
-                            </svg>
+                        <p class="footer-text body gray">
+                            Изготавливаем памятники из гранита и мрамора с 2005 года. С уважением к памяти и заботой о каждой семье.
+                        </p>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="#" class="footer-link">
+                                    <svg class="footer-link__social-icon" 
+                                         viewBox="0 0 248 248"
+                                         xmlns="http://www.w3.org/2000/svg" 
+                                         width="32" 
+                                         height="32" 
+                                         fill="none"
+                                    >
+                                        <path fill="#2AABEE" d="M0 0h248v248H0z"/>
+                                        <path fill="#fff" d="M129.362 93.057q-16.659 6.93-66.588 28.682-8.107 3.225-8.494 6.308c-.436 3.475 3.916 4.844 9.842 6.707l.12.038q1.155.361 2.377.756c5.83 1.895 13.672 4.113 17.749 4.201q5.547.12 12.382-4.574 46.65-31.491 48.162-31.833c.711-.162 1.696-.365 2.364.228.668.594.602 1.718.531 2.019-.431 1.838-17.512 17.718-26.351 25.936l-.074.068c-2.717 2.526-4.64 4.315-5.037 4.726-.894.93-1.807 1.81-2.684 2.655-5.415 5.221-9.477 9.136.226 15.53 4.649 3.064 8.373 5.6 12.085 8.128l.031.02c4.064 2.768 8.119 5.53 13.365 8.968 1.336.876 2.613 1.787 3.856 2.673 4.731 3.372 8.981 6.402 14.232 5.919 3.051-.281 6.202-3.149 7.803-11.706 3.782-20.221 11.218-64.035 12.936-82.09.15-1.582-.039-3.606-.191-4.495-.152-.888-.47-2.155-1.625-3.092-1.368-1.11-3.48-1.344-4.424-1.328-4.295.076-10.884 2.367-42.593 15.556"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-link">
+                                    <svg class="footer-link__social-icon"
+                                         viewBox="0 0 500 500" 
+                                         xmlns="http://www.w3.org/2000/svg" 
+                                         width="32" 
+                                         height="32" 
+                                         fill="none"
+                                    >
+                                        <path fill="url(#a)" d="M0 0h500v500H0z"/>
+                                        <path fill="url(#b)" d="M0 0h500v500H0z"/>
+                                        <path fill="#fff" fill-rule="evenodd" d="M253.223 398.85c-29.441 0-43.123-4.298-66.905-21.49-15.043 19.341-62.679 34.456-64.756 8.596 0-19.412-4.298-35.816-9.17-53.725C106.59 310.168 100 285.598 100 249.997 100 164.968 169.771 101 252.435 101c82.736 0 147.564 67.12 147.564 149.784.278 81.386-65.391 147.632-146.776 148.066m1.218-224.355c-40.258-2.077-71.633 25.788-78.582 69.484-5.73 36.175 4.442 80.229 13.109 82.522 4.155 1.002 14.613-7.45 21.132-13.969a74.5 74.5 0 0 0 36.39 12.966c41.713 2.006 77.356-29.75 80.157-71.418 1.63-41.756-30.487-77.123-72.206-79.513z" clip-rule="evenodd"/>
+                                            <defs>
+                                                <radialGradient id="b" cx="0" cy="0" r="1" gradientTransform="matrix(378.9086 473.90374 -195.26028 156.1199 -11.895 -219.593)" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#00F"/>
+                                                    <stop offset="1" stop-opacity="0"/>
+                                                </radialGradient>
+                                                <linearGradient id="a" x1="58.923" x2="500" y1="380.268" y2="250" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#4CF"/>
+                                                    <stop offset=".662" stop-color="#53E"/>
+                                                    <stop offset="1" stop-color="#93D"/>
+                                                </linearGradient>
+                                            </defs>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-link">
+                                    <svg class="footer-link__social-icon"
+                                         viewBox="0 0 32 32" 
+                                         xmlns="http://www.w3.org/2000/svg" 
+                                         width="32" 
+                                         height="32" 
+                                         fill="none"
+                                    >
+                                        <path fill="#07F" d="M0 0h32v32H0z"/>
+                                        <path fill="#fff" d="M16.8 21.615c-6.15 0-9.656-4.208-9.8-11.22h3.093c.099 5.142 2.364 7.318 4.163 7.767v-7.768h2.904v4.433c1.771-.19 3.641-2.212 4.27-4.442h2.896a8.57 8.57 0 0 1-3.938 5.602A8.87 8.87 0 0 1 25 21.615h-3.192c-.683-2.131-2.391-3.785-4.648-4.01v4.01h-.36"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <nav class="footer-nav">
+                        <h3 class="footer-title heading-h5 black">
+                            Разделы
+                        </h3>
+                        <a href="#" class="footer-nav__link link gray">Каталог</a>
+                        <a href="#" class="footer-nav__link link gray">Услуги</a>
+                        <a href="#" class="footer-nav__link link gray">Портфолио</a>
+                        <a href="#" class="footer-nav__link link gray">Отзывы</a>
+                        <a href="#" class="footer-nav__link link gray">Материалы</a>
+                        <a href="#" class="footer-nav__link link gray">Контакты</a>
+                    </nav>
+                    <nav class="footer-nav">
+                        <h3 class="footer-title heading-h5 black">
+                            Каталог
+                        </h3>
+                        <a href="#" class="footer-nav__link link gray">Одиночные памятники</a>
+                        <a href="#" class="footer-nav__link link gray">Двойные памятники</a>
+                        <a href="#" class="footer-nav__link link gray">Семейные комплексы</a>
+                        <a href="#" class="footer-nav__link link gray">Детские памятники</a>
+                        <a href="#" class="footer-nav__link link gray">Ограды и цоколи</a>
+                        <a href="#" class="footer-nav__link link gray">Аксессуары</a>
+                    </nav>
+                    <nav class="footer-nav footer-nav__contant">
+                        <h3 class="footer-title heading-h5 black">
+                            Контакты
+                        </h3>
+                        <a href="tel:+74951234567" class="footer-nav__link footer-nav__phone link black">
+                            +7 (495) 123-45-67
                         </a>
-                    </li>
-                    <li class="footer-item">
-                        <a href="#" class="footer-link">
-                            <svg class="footer-link__social-icon"
-                                 viewBox="0 0 32 32" 
-                                 xmlns="http://www.w3.org/2000/svg" 
-                                 width="32" 
-                                 height="32" 
-                                 fill="none"
-                            >
-                                <path fill="#07F" d="M0 0h32v32H0z"/>
-                                <path fill="#fff" d="M16.8 21.615c-6.15 0-9.656-4.208-9.8-11.22h3.093c.099 5.142 2.364 7.318 4.163 7.767v-7.768h2.904v4.433c1.771-.19 3.641-2.212 4.27-4.442h2.896a8.57 8.57 0 0 1-3.938 5.602A8.87 8.87 0 0 1 25 21.615h-3.192c-.683-2.131-2.391-3.785-4.648-4.01v4.01h-.36"/>
-                            </svg>
+                        <a href="mailto:info@gravis.ru" class="footer-nav__link link gray">
+                            info@gravis.ru
                         </a>
-                    </li>
-                </ul>
+                        <a href="#" class="footer-nav__link link gray">
+                            Планетная ул., 38, микрорайон Северный, Ростов-на-Дону
+                        </a>
+                        <p class="footer-nav__link link gray">
+                            Пн–Пт: 9:00–20:00, Сб–Вс: 10:00–18:00
+                        </p>
+                        <p class="footer-nav__link footer-nav__legal caption gray">
+                            ООО «Гравис», ИНН 7700000000, ОГРН 1057700000000
+                        </p>
+                    </nav>
+                </div>
+                <div class="footer-bottom">
+                    <p class="footer-copyright caption gray">
+                        © 2005–2026 Гравис. Все права защищены.  Разработка и поддержка tkacheev.ru
+                    </p>
+                    <nav class="footer-nav__docs">
+                        <a href="#" class="footer-nav-docs__link caption gray">
+                            Политика конфиденциальности
+                        </a>
+                        <a href="#" class="footer-nav-docs__link caption gray">
+                            Пользовательское соглашение
+                        </a>
+                    </nav>
+                </div>
             </div>
-            <nav class="footer-nav">
-                <h3 class="footer-title">
-                    Разделы
-                </h3>
-                <a href="#" class="footer-nav__link">Каталог</a>
-                <a href="#" class="footer-nav__link">Услуги</a>
-                <a href="#" class="footer-nav__link">Портфолио</a>
-                <a href="#" class="footer-nav__link">Отзывы</a>
-                <a href="#" class="footer-nav__link">Материалы</a>
-                <a href="#" class="footer-nav__link">Контакты</a>
-            </nav>
-            <nav class="footer-nav">
-                <h3 class="footer-title">
-                    Каталог
-                </h3>
-                <a href="#" class="footer-nav__link">Одиночные памятники</a>
-                <a href="#" class="footer-nav__link">Двойные памятники</a>
-                <a href="#" class="footer-nav__link">Семейные комплексы</a>
-                <a href="#" class="footer-nav__link">Детские памятники</a>
-                <a href="#" class="footer-nav__link">Ограды и цоколи</a>
-                <a href="#" class="footer-nav__link">Аксессуары</a>
-            </nav>
-            <nav class="footer-nav">
-                <h3 class="footer-title">
-                    Контакты
-                </h3>
-                <a href="tel:+74951234567" class="footer-nav__link">
-                    +7 (495) 123-45-67
-                </a>
-                <a href="mailto:info@gravis.ru" class="footer-nav__link">
-                    info@gravis.ru
-                </a>
-                <a href="#" class="footer-nav__link">
-                    Планетная ул., 38, микрорайон Северный, Ростов-на-Дону
-                </a>
-                <p class="footer-nav__link">
-                    Пн–Пт: 9:00–20:00, Сб–Вс: 10:00–18:00
-                </p>
-                <p class="footer-nav__link">
-                    ООО «Гравис», ИНН 7700000000, ОГРН 1057700000000
-                </p>
-            </nav>
-        </div>
-        <div class="footer-bottom">
-            <p class="footer-copyright">
-                © 2005–2026 Гравис. Все права защищены.  Разработка и поддержка tkacheev.ru
-            </p>
-            <nav class="footer-nav__docs">
-                <a href="#" class="footer-nav-docs__link">
-                    Политика конфиденциальности
-                </a>
-                <a href="#" class="footer-nav-docs__link">
-                    Пользовательское соглашение
-                </a>
-            </nav>
         </div>
     </footer>
+
+    <!--request modal-->
+
+    <div class="modal" id="requestModal" role="dialog" aria-modal="true" aria-labelledby="requestModalTitle" hidden>
+        <div class="modal__overlay" data-modal-close></div>
+        <div class="modal__dialog">
+            <button class="modal__close" type="button" data-modal-close aria-label="Закрыть">
+                <span class="close-icon">
+                    <span class="close-line"></span>
+                    <span class="close-line"></span>
+                </span>
+            </button>
+            <form class="modal-form" id="requestForm" novalidate data-form>
+                <h2 class="modal-form__title heading-h3 black" id="requestModalTitle" data-request-title>
+                    Заказать консультацию
+                </h2>
+                <p class="modal-form__text body gray">
+                    Оставьте контакты — мы перезвоним в удобное для вас время.
+                </p>
+                <div class="field">
+                    <label for="requestName" class="field__label caption black">Имя</label>
+                    <input id="requestName" name="name" type="text" class="field__input body" placeholder="Как к вам обращаться" autocomplete="name">
+                </div>
+                <div class="field">
+                    <label for="requestPhone" class="field__label caption black">Телефон <span class="field__required caption-small gray">обязательно</span></label>
+                    <input id="requestPhone" name="phone" type="tel" class="field__input body" placeholder="+7 (___) ___-__-__" autocomplete="tel" data-phone required>
+                    <p class="field__error caption">
+                        Пожалуйста, укажите номер, чтобы мы могли перезвонить
+                    </p>
+                </div>
+                <div class="field">
+                    <label for="requestComment" class="field__label caption black" data-request-comment-label>Комментарий</label>
+                    <textarea id="requestComment" name="comment" rows="3" class="field__input field__textarea body" placeholder="Необязательно"></textarea>
+                </div>
+                <label class="checkbox checkbox--consent">
+                    <input type="checkbox" name="consent" class="checkbox__input" checked required>
+                    <span class="checkbox__box"></span>
+                    <span class="checkbox__text caption gray">
+                        Согласен(на) на <a href="#" class="checkbox__link green">обработку персональных данных</a>
+                    </span>
+                </label>
+                <button type="submit" class="btn button button-primary button-block">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <!--toasts-->
+
+    <div class="toast-list" aria-live="polite" data-toasts></div>
+
     <script src="assets/scripts/textWalker.js"></script>
     <script src="assets/scripts/header.js"></script>
+    <script src="assets/scripts/form.js"></script>
+    <script src="assets/scripts/modal.js"></script>
+    <script src="assets/scripts/slider.js"></script>
+    <script src="assets/scripts/calculator.js"></script>
+    <script src="assets/scripts/portfolio.js"></script>
+    <script src="assets/scripts/faq.js"></script>
 </body>
 </html>
