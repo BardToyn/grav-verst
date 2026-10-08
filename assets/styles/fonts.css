@@ -9,9 +9,10 @@
     --heading-h1-line-height: 120%;
     --heading-h1-font-weight: 500;
 
-    --heading-h2-size: calc(62 / 1440 * 100vw);/*webkit and firefox*/
+    --heading-h2-size: calc(50 / 1440 * 100vw);/*webkit and firefox*/
     --heading-h2-line-height: 120%;
-    --heading-h2-font-weight: 300;
+    --heading-h2-font-weight: 500;
+    --heading-h2-letter-spacing: -2%;
 
     --heading-h3-size: calc(40 / 1440 * 100vw);/*webkit and firefox*/
     --heading-h3-line-height: 120%;
@@ -84,7 +85,7 @@ body {
     font-size: var(--heading-h2-size);
     line-height: var(--heading-h2-line-height);
     font-weight: var(--heading-h2-font-weight);
-    text-transform: uppercase;
+    letter-spacing: var(--heading-h2-letter-spacing);
 }
 
 .heading-h3 {

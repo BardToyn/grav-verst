@@ -6,6 +6,7 @@
     --clr-black: #2E2E2E;
     --clr-milk: #F8F5F0;
     --clr-gray: #6E6A64;
+    --clr-green: #3D7035;
 
     /*brand-colors-end*/
 
@@ -25,4 +26,8 @@
 
 .gray {
     color: var(--clr-gray);
+}
+
+.green {
+    color: var(--clr-green);
 }
