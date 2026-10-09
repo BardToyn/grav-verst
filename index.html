@@ -659,35 +659,35 @@
                                     </legend>
                                     <div class="option-list">
                                         <label class="option">
-                                            <input type="radio" name="type" value="Одиночный" data-price="18900" class="option__input" checked>
+                                            <input type="radio" name="type" value="Одиночный" data-type="single" data-price="39000" class="option__input" checked>
                                             <span class="option__body">
                                                 <span class="option__title subtitle black">Одиночный</span>
                                                 <span class="option__desc caption gray">Вертикальная стела на одного человека</span>
-                                                <span class="option__price caption green">от 18 900 ₽</span>
+                                                <span class="option__price caption green">от 39 000 ₽</span>
                                             </span>
                                         </label>
                                         <label class="option">
-                                            <input type="radio" name="type" value="Двойной" data-price="32900" class="option__input">
+                                            <input type="radio" name="type" value="Двойной" data-type="double" data-price="46500" class="option__input">
                                             <span class="option__body">
                                                 <span class="option__title subtitle black">Двойной</span>
                                                 <span class="option__desc caption gray">Широкая стела для супругов или родных</span>
-                                                <span class="option__price caption green">от 32 900 ₽</span>
+                                                <span class="option__price caption green">от 46 500 ₽</span>
                                             </span>
                                         </label>
                                         <label class="option">
-                                            <input type="radio" name="type" value="Семейный комплекс" data-price="68000" class="option__input">
+                                            <input type="radio" name="type" value="Семейный комплекс" data-type="family" data-price="109000" class="option__input">
                                             <span class="option__body">
                                                 <span class="option__title subtitle black">Семейный комплекс</span>
                                                 <span class="option__desc caption gray">Несколько стел с общим основанием</span>
-                                                <span class="option__price caption green">от 68 000 ₽</span>
+                                                <span class="option__price caption green">от 109 000 ₽</span>
                                             </span>
                                         </label>
                                         <label class="option">
-                                            <input type="radio" name="type" value="Детский" data-price="14900" class="option__input">
+                                            <input type="radio" name="type" value="Детский" data-type="child" data-price="34000" class="option__input">
                                             <span class="option__body">
                                                 <span class="option__title subtitle black">Детский</span>
-                                                <span class="option__desc caption gray">Небольшие мягкие формы, светлый камень</span>
-                                                <span class="option__price caption green">от 14 900 ₽</span>
+                                                <span class="option__desc caption gray">Небольшой памятник</span>
+                                                <span class="option__price caption green">от 34 000 ₽</span>
                                             </span>
                                         </label>
                                     </div>
@@ -697,32 +697,35 @@
                                     <legend class="calc-step__legend heading-h4 black">
                                         Выберите материал
                                     </legend>
+                                    <p class="calc-step__note caption gray">
+                                        Стартовая цена вида памятника указана за комплект из гранита высотой 1 м. Другой камень и размер изменят сумму.
+                                    </p>
                                     <div class="option-list option-list--three">
                                         <label class="option">
-                                            <input type="radio" name="material" value="Гранит" data-mult="1" class="option__input" checked>
+                                            <input type="radio" name="material" value="Гранит" data-material="granite" data-p08="30750" data-p10="34500" data-p12="46500" class="option__input" checked>
                                             <span class="option__body">
                                                 <span class="option__swatch option__swatch--granite"></span>
                                                 <span class="option__title subtitle black">Гранит</span>
-                                                <span class="option__desc caption gray">Самый прочный, служит веками</span>
+                                                <span class="option__desc caption gray">0,8 м — 30 750 ₽, 1 м — 34 500 ₽, 1,2 м — 46 500 ₽</span>
                                                 <span class="option__price caption green">базовая цена</span>
                                             </span>
                                         </label>
                                         <label class="option">
-                                            <input type="radio" name="material" value="Мрамор" data-mult="1.2" class="option__input">
+                                            <input type="radio" name="material" value="Мрамор" data-material="marble" data-p08="22750" data-p10="27500" data-p12="34500" class="option__input">
                                             <span class="option__body">
                                                 <span class="option__swatch option__swatch--marble"></span>
                                                 <span class="option__title subtitle black">Мрамор</span>
-                                                <span class="option__desc caption gray">Светлый, благородный, тёплый оттенок</span>
-                                                <span class="option__price caption green">+20%</span>
+                                                <span class="option__desc caption gray">0,8 м — 22 750 ₽, 1 м — 27 500 ₽, 1,2 м — 34 500 ₽</span>
+                                                <span class="option__price caption green">своя цена комплекта</span>
                                             </span>
                                         </label>
                                         <label class="option">
-                                            <input type="radio" name="material" value="Комбинированный" data-mult="1.35" class="option__input">
+                                            <input type="radio" name="material" value="Комбинированный" data-material="combo" data-add="13000" class="option__input">
                                             <span class="option__body">
                                                 <span class="option__swatch option__swatch--combo"></span>
                                                 <span class="option__title subtitle black">Комбинированный</span>
-                                                <span class="option__desc caption gray">Сочетание гранита и мрамора</span>
-                                                <span class="option__price caption green">+35%</span>
+                                                <span class="option__desc caption gray">К цене гранита того же размера</span>
+                                                <span class="option__price caption green">+13 000 ₽</span>
                                             </span>
                                         </label>
                                     </div>
@@ -733,28 +736,60 @@
                                         Размер и форма
                                     </legend>
                                     <p class="calc-step__label caption gray">
-                                        Размер стелы
+                                        Стандартный комплект
                                     </p>
                                     <div class="option-list option-list--three">
                                         <label class="option">
-                                            <input type="radio" name="size" value="80×40 см" data-mult="1" class="option__input" checked>
+                                            <input type="radio" name="size" value="Комплект 0,8 м" data-kind="kit" data-key="p08" class="option__input">
                                             <span class="option__body">
-                                                <span class="option__title subtitle black">80×40 см</span>
-                                                <span class="option__desc caption gray">Компактный</span>
+                                                <span class="option__title subtitle black">0,8 м</span>
+                                                <span class="option__desc caption gray">Стела 80×40×7/8, тумба 50×15×20, цветник 100×50 (5×8)</span>
+                                                <span class="option__price caption green" data-kit="p08">− 3 750 ₽</span>
                                             </span>
                                         </label>
                                         <label class="option">
-                                            <input type="radio" name="size" value="100×50 см" data-mult="1.25" class="option__input">
+                                            <input type="radio" name="size" value="Комплект 1 м" data-kind="kit" data-key="p10" class="option__input" checked>
                                             <span class="option__body">
-                                                <span class="option__title subtitle black">100×50 см</span>
-                                                <span class="option__desc caption gray">Самый популярный</span>
+                                                <span class="option__title subtitle black">1 м</span>
+                                                <span class="option__desc caption gray">Стела 100×50×8, тумба 60×15×20, цветник 100×60 (8×8)</span>
+                                                <span class="option__price caption green" data-kit="p10">в стартовой цене</span>
                                             </span>
                                         </label>
                                         <label class="option">
-                                            <input type="radio" name="size" value="120×60 см" data-mult="1.55" class="option__input">
+                                            <input type="radio" name="size" value="Комплект 1,2 м" data-kind="kit" data-key="p12" class="option__input">
                                             <span class="option__body">
-                                                <span class="option__title subtitle black">120×60 см</span>
-                                                <span class="option__desc caption gray">Крупный</span>
+                                                <span class="option__title subtitle black">1,2 м</span>
+                                                <span class="option__desc caption gray">Стела 120×60×8, тумба 70×15×20, цветник 100/120×70 (8×8)</span>
+                                                <span class="option__price caption green" data-kit="p12">+ 12 000 ₽</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <p class="calc-step__label caption gray">
+                                        Надгробная плита, гранит
+                                    </p>
+                                    <div class="option-list option-list--three">
+                                        <label class="option">
+                                            <input type="radio" name="size" value="Плита 80×40×5" data-kind="slab" data-key="p08" data-price="12990" class="option__input">
+                                            <span class="option__body">
+                                                <span class="option__title subtitle black">80×40×5</span>
+                                                <span class="option__desc caption gray">Вместо комплекта со стелой</span>
+                                                <span class="option__price caption green" data-slab-label>12 990 ₽</span>
+                                            </span>
+                                        </label>
+                                        <label class="option">
+                                            <input type="radio" name="size" value="Плита 100×50×5" data-kind="slab" data-key="p10" data-price="18990" class="option__input">
+                                            <span class="option__body">
+                                                <span class="option__title subtitle black">100×50×5</span>
+                                                <span class="option__desc caption gray">Вместо комплекта со стелой</span>
+                                                <span class="option__price caption green" data-slab-label>18 990 ₽</span>
+                                            </span>
+                                        </label>
+                                        <label class="option">
+                                            <input type="radio" name="size" value="Плита 120×60×5" data-kind="slab" data-key="p12" data-price="23990" class="option__input">
+                                            <span class="option__body">
+                                                <span class="option__title subtitle black">120×60×5</span>
+                                                <span class="option__desc caption gray">Вместо комплекта со стелой</span>
+                                                <span class="option__price caption green" data-slab-label>23 990 ₽</span>
                                             </span>
                                         </label>
                                     </div>
@@ -770,19 +805,19 @@
                                             </span>
                                         </label>
                                         <label class="option">
-                                            <input type="radio" name="shape" value="Арка" data-price="2500" class="option__input">
+                                            <input type="radio" name="shape" value="Арка" data-price="5990" class="option__input">
                                             <span class="option__body">
                                                 <span class="option__title subtitle black">Арка</span>
                                                 <span class="option__desc caption gray">Мягкий скруглённый верх</span>
-                                                <span class="option__price caption green">+2 500 ₽</span>
+                                                <span class="option__price caption green">+5 990 ₽</span>
                                             </span>
                                         </label>
                                         <label class="option">
-                                            <input type="radio" name="shape" value="Фигурная" data-price="6500" class="option__input">
+                                            <input type="radio" name="shape" value="Фигурная" data-price="4990" class="option__input">
                                             <span class="option__body">
                                                 <span class="option__title subtitle black">Фигурная</span>
                                                 <span class="option__desc caption gray">Волна, асимметрия, резьба</span>
-                                                <span class="option__price caption green">+6 500 ₽</span>
+                                                <span class="option__price caption green">от 4 990 ₽</span>
                                             </span>
                                         </label>
                                     </div>
@@ -794,45 +829,59 @@
                                     </legend>
                                     <div class="option-list option-list--three">
                                         <label class="option">
-                                            <input type="radio" name="engraving" value="Текст" data-price="3500" class="option__input" checked>
+                                            <input type="radio" name="engraving" value="Текст" data-mode="text" data-price="2490" data-opens="decor-text" class="option__input" checked>
                                             <span class="option__body">
                                                 <span class="option__title subtitle black">Текст</span>
-                                                <span class="option__desc caption gray">ФИО, даты, эпитафия</span>
-                                                <span class="option__price caption green">+3 500 ₽</span>
+                                                <span class="option__desc caption gray">ФИО и даты</span>
+                                                <span class="option__price caption green">+2 490 ₽</span>
                                             </span>
                                         </label>
                                         <label class="option">
-                                            <input type="radio" name="engraving" value="Текст и портрет" data-price="12000" class="option__input">
+                                            <input type="radio" name="engraving" value="Текст и портрет" data-mode="portrait" data-price="11980" class="option__input">
                                             <span class="option__body">
                                                 <span class="option__title subtitle black">Текст и портрет</span>
-                                                <span class="option__desc caption gray">Ручная гравировка портрета</span>
-                                                <span class="option__price caption green">+12 000 ₽</span>
+                                                <span class="option__desc caption gray">Портрет ручной от 7 490 ₽, текст ручной от 4 490 ₽</span>
+                                                <span class="option__price caption green">от 11 980 ₽</span>
                                             </span>
                                         </label>
                                         <label class="option">
-                                            <input type="radio" name="engraving" value="Художественная композиция" data-price="22000" class="option__input">
+                                            <input type="radio" name="engraving" value="Композиция" data-mode="composition" data-price="0" data-min="1490" data-opens="decor-composition" class="option__input">
                                             <span class="option__body">
                                                 <span class="option__title subtitle black">Композиция</span>
-                                                <span class="option__desc caption gray">Портрет, пейзаж, символы</span>
-                                                <span class="option__price caption green">+22 000 ₽</span>
+                                                <span class="option__desc caption gray">Портрет, пейзаж или символы</span>
+                                                <span class="option__price caption green">от 1 490 ₽</span>
                                             </span>
                                         </label>
                                     </div>
-                                    <p class="calc-step__label caption gray">
-                                        Декор
-                                    </p>
-                                    <div class="checkbox-list">
+                                    <div class="calc-panel" data-panel="decor-text">
+                                        <p class="calc-step__note caption gray">
+                                            На лицевой стороне стелы крестик и эпитафия — в подарок и в сумму не входят.
+                                        </p>
                                         <label class="checkbox">
-                                            <input type="checkbox" name="decor" value="Золочение букв" data-price="4000" class="checkbox__input">
+                                            <input type="checkbox" name="decor" value="Эпитафия" data-for="text" data-price="1490" class="checkbox__input">
                                             <span class="checkbox__box"></span>
-                                            <span class="checkbox__text body black">Золочение букв сусальным золотом</span>
-                                            <span class="checkbox__price caption green">+4 000 ₽</span>
+                                            <span class="checkbox__text body black">Эпитафия на плите или на обороте стелы</span>
+                                            <span class="checkbox__price caption green">+1 490 ₽</span>
+                                        </label>
+                                    </div>
+                                    <div class="calc-panel" data-panel="decor-composition" hidden>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="decor" value="Портрет" data-for="composition" data-price="4990" class="checkbox__input">
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">Портрет</span>
+                                            <span class="checkbox__price caption green">от 4 990 ₽</span>
                                         </label>
                                         <label class="checkbox">
-                                            <input type="checkbox" name="decor" value="Символ или крест" data-price="2500" class="checkbox__input">
+                                            <input type="checkbox" name="decor" value="Пейзаж" data-for="composition" data-price="3490" class="checkbox__input">
                                             <span class="checkbox__box"></span>
-                                            <span class="checkbox__text body black">Символ, крест или цветы</span>
-                                            <span class="checkbox__price caption green">+2 500 ₽</span>
+                                            <span class="checkbox__text body black">Пейзаж</span>
+                                            <span class="checkbox__price caption green">от 3 490 ₽</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="decor" value="Символы и рисунки" data-for="composition" data-price="1490" class="checkbox__input">
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">Символы и рисунки</span>
+                                            <span class="checkbox__price caption green">от 1 490 ₽</span>
                                         </label>
                                     </div>
                                 </fieldset>
@@ -843,35 +892,223 @@
                                     </legend>
                                     <div class="checkbox-list">
                                         <label class="checkbox">
-                                            <input type="checkbox" name="extra" value="Цветник" data-price="9500" class="checkbox__input">
+                                            <input type="checkbox" name="flower" value="Цветник из камня" data-sum data-price="7490" class="checkbox__input">
                                             <span class="checkbox__box"></span>
                                             <span class="checkbox__text body black">Цветник из камня</span>
-                                            <span class="checkbox__price caption green">+9 500 ₽</span>
+                                            <span class="checkbox__price caption green">+7 490 ₽</span>
+                                        </label>
+                                    </div>
+                                    <p class="calc-step__label caption gray">
+                                        Укладка плитки на участке
+                                    </p>
+                                    <div class="checkbox-list">
+                                        <label class="checkbox">
+                                            <input type="radio" name="tile" value="Без плитки" class="checkbox__input" checked>
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">Не нужна</span>
                                         </label>
                                         <label class="checkbox">
-                                            <input type="checkbox" name="extra" value="Укладка плитки" data-price="15000" class="checkbox__input">
+                                            <input type="radio" name="tile" value="Тротуарная плитка" data-sum data-price="5290" class="checkbox__input">
                                             <span class="checkbox__box"></span>
-                                            <span class="checkbox__text body black">Укладка плитки на участке</span>
-                                            <span class="checkbox__price caption green">+15 000 ₽</span>
+                                            <span class="checkbox__text body black">Тротуарная плитка и кладка</span>
+                                            <span class="checkbox__price caption green">+5 290 ₽</span>
                                         </label>
                                         <label class="checkbox">
-                                            <input type="checkbox" name="extra" value="Ограда" data-price="18000" class="checkbox__input">
+                                            <input type="radio" name="tile" value="Керамика или керамогранит" data-sum data-price="4490" class="checkbox__input">
                                             <span class="checkbox__box"></span>
-                                            <span class="checkbox__text body black">Ограда</span>
-                                            <span class="checkbox__price caption green">+18 000 ₽</span>
+                                            <span class="checkbox__text body black">Керамика или керамогранит</span>
+                                            <span class="checkbox__price caption green">+4 490 ₽</span>
                                         </label>
                                         <label class="checkbox">
-                                            <input type="checkbox" name="extra" value="Установка" data-price="8000" class="checkbox__input" checked>
+                                            <input type="radio" name="tile" value="Плитка гранит или мрамор" data-sum data-price="5990" class="checkbox__input">
                                             <span class="checkbox__box"></span>
-                                            <span class="checkbox__text body black">Доставка и установка</span>
-                                            <span class="checkbox__price caption green">+8 000 ₽</span>
+                                            <span class="checkbox__text body black">Гранит или мрамор</span>
+                                            <span class="checkbox__price caption green">+5 990 ₽</span>
+                                        </label>
+                                    </div>
+                                    <p class="calc-step__label caption gray">
+                                        Оградка
+                                    </p>
+                                    <div class="checkbox-list">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="fence" value="Оградка 230×230×60" data-sum data-price="14990" class="checkbox__input">
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">Стандартная, 230×230×60</span>
+                                            <span class="checkbox__price caption green">+14 990 ₽</span>
+                                        </label>
+                                    </div>
+                                    <p class="calc-step__label caption gray">
+                                        Доставка и установка
+                                    </p>
+                                    <div class="checkbox-list">
+                                        <label class="checkbox">
+                                            <input type="radio" name="delivery" value="Без доставки" class="checkbox__input" checked>
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">Доставка не нужна</span>
                                         </label>
                                         <label class="checkbox">
-                                            <input type="checkbox" name="extra" value="Демонтаж старого" data-price="5000" class="checkbox__input">
+                                            <input type="radio" name="delivery" value="Доставка по городу" data-sum data-price="2000" class="checkbox__input">
                                             <span class="checkbox__box"></span>
-                                            <span class="checkbox__text body black">Демонтаж старого памятника</span>
-                                            <span class="checkbox__price caption green">+5 000 ₽</span>
+                                            <span class="checkbox__text body black">По городу</span>
+                                            <span class="checkbox__price caption green">+2 000 ₽</span>
                                         </label>
+                                        <label class="checkbox">
+                                            <input type="radio" name="delivery" value="Доставка за городом" data-sum data-per-km="120" data-price-for="delivery" class="checkbox__input">
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">За городом <input class="calc-km" type="number" name="km" min="1" max="300" step="1" value="1" data-km inputmode="numeric" aria-label="Километры за городом"> км</span>
+                                            <span class="checkbox__price caption green" data-bind="delivery">+ 120 ₽</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="install" value="Установка памятника" data-sum data-price-for="install" data-p08="5490" data-p10="6990" data-p12="7990" class="checkbox__input">
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">Установка памятника</span>
+                                            <span class="checkbox__price caption green" data-bind="install">+ 6 990 ₽</span>
+                                        </label>
+                                    </div>
+                                    <p class="calc-step__label caption gray">
+                                        Демонтаж старого памятника
+                                    </p>
+                                    <div class="checkbox-list">
+                                        <label class="checkbox">
+                                            <input type="radio" name="dismantle" value="Без демонтажа" class="checkbox__input" checked>
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">Не нужен</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="radio" name="dismantle" value="Демонтаж: железо, бетон или литьё" data-sum data-price="1490" class="checkbox__input">
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">Железный, бетонный или литьевой</span>
+                                            <span class="checkbox__price caption green">+1 490 ₽</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="radio" name="dismantle" value="Демонтаж: гранит или мрамор" data-sum data-price-for="dismantle" data-p08="2990" data-p10="3990" data-p12="4490" class="checkbox__input">
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">Гранит или мрамор</span>
+                                            <span class="checkbox__price caption green" data-bind="dismantle">+ 3 990 ₽</span>
+                                        </label>
+                                    </div>
+                                    <p class="calc-step__label caption gray">
+                                        Фундамент
+                                    </p>
+                                    <p class="calc-step__note caption gray">
+                                        Если фундамент уже есть на участке, цены памятника выше не меняются.
+                                    </p>
+                                    <div class="checkbox-list">
+                                        <label class="checkbox">
+                                            <input type="radio" name="foundation" value="Фундамент уже есть" class="checkbox__input" checked>
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">Уже есть на участке</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="radio" name="foundation" value="Бетонный фундамент" data-opens="found-concrete foundation-extra" class="checkbox__input">
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">Бетонный, без облицовки</span>
+                                            <span class="checkbox__price caption green">от 5 000 ₽</span>
+                                        </label>
+                                        <div class="calc-panel" data-panel="found-concrete" hidden>
+                                            <label class="checkbox">
+                                                <input type="radio" name="foundConcrete" value="Бетон 140×70×10" data-sum data-price="5000" class="checkbox__input" checked>
+                                                <span class="checkbox__box"></span>
+                                                <span class="checkbox__text body black">140×70×10</span>
+                                                <span class="checkbox__price caption green">+5 000 ₽</span>
+                                            </label>
+                                            <label class="checkbox">
+                                                <input type="radio" name="foundConcrete" value="Бетон 150×80×10" data-sum data-price="5590" class="checkbox__input">
+                                                <span class="checkbox__box"></span>
+                                                <span class="checkbox__text body black">150×80×10</span>
+                                                <span class="checkbox__price caption green">+5 590 ₽</span>
+                                            </label>
+                                            <label class="checkbox">
+                                                <input type="radio" name="foundConcrete" value="Бетон 150×90×10" data-sum data-price="5990" class="checkbox__input">
+                                                <span class="checkbox__box"></span>
+                                                <span class="checkbox__text body black">150×90×10</span>
+                                                <span class="checkbox__price caption green">+5 990 ₽</span>
+                                            </label>
+                                        </div>
+                                        <label class="checkbox">
+                                            <input type="radio" name="foundation" value="Фундамент с мраморной крошкой" data-opens="found-chip foundation-extra" class="checkbox__input">
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">Облицовка мраморной крошкой</span>
+                                            <span class="checkbox__price caption green">от 7 990 ₽</span>
+                                        </label>
+                                        <div class="calc-panel" data-panel="found-chip" hidden>
+                                            <label class="checkbox">
+                                                <input type="radio" name="foundChip" value="Крошка 140×70×10" data-sum data-price="7990" class="checkbox__input" checked>
+                                                <span class="checkbox__box"></span>
+                                                <span class="checkbox__text body black">140×70×10</span>
+                                                <span class="checkbox__price caption green">+7 990 ₽</span>
+                                            </label>
+                                            <label class="checkbox">
+                                                <input type="radio" name="foundChip" value="Крошка 150×80×10" data-sum data-price="8990" class="checkbox__input">
+                                                <span class="checkbox__box"></span>
+                                                <span class="checkbox__text body black">150×80×10</span>
+                                                <span class="checkbox__price caption green">+8 990 ₽</span>
+                                            </label>
+                                            <label class="checkbox">
+                                                <input type="radio" name="foundChip" value="Крошка 150×90×10" data-sum data-price="9990" class="checkbox__input">
+                                                <span class="checkbox__box"></span>
+                                                <span class="checkbox__text body black">150×90×10</span>
+                                                <span class="checkbox__price caption green">+9 990 ₽</span>
+                                            </label>
+                                        </div>
+                                        <label class="checkbox">
+                                            <input type="radio" name="foundation" value="Керамогранит 30×30, 150×90×10" data-sum data-price="9990" data-opens="foundation-extra" class="checkbox__input">
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">Керамогранит серый или бежевый, 30×30×0,6, основание 150×90×10</span>
+                                            <span class="checkbox__price caption green">+9 990 ₽</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="radio" name="foundation" value="Керамогранит 60×30, 150×90×10" data-sum data-price="13490" data-opens="foundation-extra" class="checkbox__input">
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">Керамогранитная плитка 60×30×0,9, основание 150×90×10</span>
+                                            <span class="checkbox__price caption green">+13 490 ₽</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="radio" name="foundation" value="Плитка мрамор или гранит, 150×90×10" data-sum data-price="24990" data-opens="foundation-extra" class="checkbox__input">
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">Мраморная или гранитная плитка 60×30×1,8/2, основание 150×90×10</span>
+                                            <span class="checkbox__price caption green">от 24 990 ₽</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="radio" name="foundation" value="Заливка по месту" data-opens="found-pour foundation-extra" class="checkbox__input">
+                                            <span class="checkbox__box"></span>
+                                            <span class="checkbox__text body black">Заливка по месту, за 1 м²</span>
+                                            <span class="checkbox__price caption green">от 5 990 ₽</span>
+                                        </label>
+                                        <div class="calc-panel" data-panel="found-pour" hidden>
+                                            <label class="checkbox">
+                                                <input type="radio" name="foundPour" value="Заливка 10 см, 1 м²" data-sum data-price="5990" class="checkbox__input" checked>
+                                                <span class="checkbox__box"></span>
+                                                <span class="checkbox__text body black">10 см</span>
+                                                <span class="checkbox__price caption green">+5 990 ₽</span>
+                                            </label>
+                                            <label class="checkbox">
+                                                <input type="radio" name="foundPour" value="Заливка 15 см, 1 м²" data-sum data-price="6990" class="checkbox__input">
+                                                <span class="checkbox__box"></span>
+                                                <span class="checkbox__text body black">15 см, стандарт</span>
+                                                <span class="checkbox__price caption green">+6 990 ₽</span>
+                                            </label>
+                                            <label class="checkbox">
+                                                <input type="radio" name="foundPour" value="Заливка 30 см, 1 м²" data-sum data-price="13490" class="checkbox__input">
+                                                <span class="checkbox__box"></span>
+                                                <span class="checkbox__text body black">30 см</span>
+                                                <span class="checkbox__price caption green">+13 490 ₽</span>
+                                            </label>
+                                        </div>
+                                        <div class="calc-panel" data-panel="foundation-extra" hidden>
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="foundInstall" value="Установка фундамента" data-sum data-price="2990" class="checkbox__input">
+                                                <span class="checkbox__box"></span>
+                                                <span class="checkbox__text body black">Установка фундамента</span>
+                                                <span class="checkbox__price caption green">от 2 990 ₽</span>
+                                            </label>
+                                            <label class="checkbox">
+                                                <input type="checkbox" name="channel" value="Швеллер" data-sum data-price-for="channel" data-price-single="2690" data-price-double="5190" class="checkbox__input">
+                                                <span class="checkbox__box"></span>
+                                                <span class="checkbox__text body black" data-bind-text="channel">Швеллер, 3 м</span>
+                                                <span class="checkbox__price caption green" data-bind="channel">+ 2 690 ₽</span>
+                                            </label>
+                                        </div>
                                     </div>
                                 </fieldset>
 
